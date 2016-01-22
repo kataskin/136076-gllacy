@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Каталог</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <nav class="main-navigation">
+        <ul>
+          <li>
+            <img src="http://placehold.it/150x100" alt="GllacyShop">
+          </li>
+          <li>
+            <a href="#">Каталог</a>
+          </li>
+          <li>
+            <a href="#">Доставка и оплата</a>
+          </li>
+          <li>
+            <a href="#">О компании</a>
+          </li>
+        </ul>
+      </nav>
+      <form action="#">
+        <input type="text"><!-- Не понимаю, что должно происходить при
+          нажатии этой кнопки с лупой, поэтому пока какой-то неясный
+          input здесь поставлю-->
+          <a href="#" class="entrance">Вход</a>
+          <a href="#" class="basket">Пусто</a><br>
+          С 10 до 20, ежедневно<br>
+          <b>8 812 450-25-25</b>
+      </form>
+    </header>
+    <main>
+      <div class="breadcrumbs">
+        <ul>
+          <li>
+            <a href="#">Главная</a>
+          </li>
+          <li>
+            <a href="#">Каталог</a>
+          </li>
+          <li>
+            <a href="#">Сливочное</a>
+          </li>
+        </ul>
+      </div>
+      <h1>Сливочное мороженое</h1>
+      <form action="#">
+        <div class="filters"
+          <label>Сортировка</label><br>
+          <select class="filters-value">
+            <option>По популярности</option>
+            <option>По цене по возростанию</option>
+            <option>По цене по убыванию</option>
+          </select>
+        </div>
+        <div class="filters">
+          <label>Цена: 100 руб. &ndash; 500 руб.</label><br>
+          <input> <!--Не знаю, как сделать такую дорожку -->
+        </div>
+        <div class="filters">
+          <label>Жирность</label>
+          <div class="filters-value">
+            <input type="radio" name="fatness" value="0">0%
+            <input type="radio" name="fatness" value="10">до 10%
+            <input type="radio" name="fatness" value="30">до 30%
+            <input type="radio" name="fatness" value="30-100">выше 30%
+          </div>
+        </div>
+        <div class="filters">
+          <label>Наполнители:</label>
+          <div class="filters-value">
+            <input type="checkbox"> шоколадные
+            <input type="checkbox"> сахарные присыпки
+            <input type="checkbox"> фрукты
+            <input type="checkbox"> сиропы
+            <input type="checkbox"> джемы
+          </div>
+        </div>
+      </form>
+      <ul>
+        <li>
+          <img src="http://placehold.it/150x100" alt="Мороженое"><!-- Cтоимость сделать
+            через :after -->
+          <a href="#">
+            Сливочное с апельсиновым джемом и цитрусовой стружкой
+          </a>
+        </li>
+        <li>
+          <img src="http://placehold.it/150x100" alt="Мороженое">
+          <a href="#">
+            Сливочно-кофейное с кусочками шоколада
+          </a>
+        </li>
+        <li>
+          <img src="http://placehold.it/150x100" alt="Мороженое">
+          <a href="#">
+            Сливочно-клубничное с присыпкой из белого шоколада
+          </a>
+        </li>
+        <li>
+          <img src="http://placehold.it/150x100" alt="Мороженое">
+          <a href="#">
+            Сливочное крем-брюле с карамельной подливкой
+          </a>
+        </li>
+        <li>
+          <img src="http://placehold.it/150x100" alt="Мороженое">
+          <a href="#">
+            Сливочное с брусничным джемом
+          </a>
+        </li>
+        <li>
+          <img src="http://placehold.it/150x100" alt="Мороженое">
+          <a href="#">
+            Сливочно-черничное с цельными ягодами черники
+          </a>
+        </li>
+        <li>
+          <img src="http://placehold.it/150x100" alt="Мороженое">
+          <a href="#">
+            Сливочно-лимонное с карамельной присыпкой
+          </a>
+        </li>
+        <li>
+          <img src="http://placehold.it/150x100" alt="Мороженое">
+          <a href="#">
+            Сливочное с шоколадной стружкой
+          </a>
+        </li>
+        <li>
+          <img src="http://placehold.it/150x100" alt="Мороженое">
+          <a href="#">
+            Сливочно-ванильное с кусочками шоколада
+          </a>
+        </li>
+        <li>
+          <img src="http://placehold.it/150x100" alt="Мороженое">
+          <a href="#">
+            Сливочное с ментоловым сиропом
+          </a>
+        </li>
+        <li>
+          <img src="http://placehold.it/150x100" alt="Мороженое">
+          <a href="#">
+            Сливочное с кусочками черного шоколада
+          </a>
+        </li>
+        <li>
+          <img src="http://placehold.it/150x100" alt="Мороженое">
+          <a href="#">
+            Сливочное с мятным сиропом
+          </a>
+        </li>
+      </ul>
+      <div class="pages"><!-- Стрелочки через :before, :after -->
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+      </div>
+    </main>
+    <footer class="main-footer">
+      <div class="footer-sotial">
+        <div class="twitter">
+          Твиттер
+        </div>
+        <div class="instagram">
+          Инстаграм
+        </div>
+        <div class="facebook">
+          Фэйсбук
+        </div>
+        <div class="vkontakte">
+          ВКонтакте
+        </div>
+      </div>
+      <div class="footer-documents">
+        <a href="#">Для поставщиков</a>
+        <a href="#">О производстве</a>
+        <a href="#">Наши документы</a>
+        <a href="#">Экологические стандарты</a>
+      </div>
+      <div class="footer-copyright">
+        <p>Сделано в <a href="#">HTML Academy</a> &copy; 2016</p>
+      </div>
+    </footer>
+  </body>
+</html>
