@@ -44,7 +44,7 @@
         </nav>
         <div class="user-block">
           <div class="user-block-element">
-            <a href="#" class="search">Поиск</a>
+            <a href="#" class="user-block-btn search">Поиск</a>
             <div class="popup">
               <form action="#">
                 <input type="text" placeholder="Что ищем?" class="entry-field">
@@ -52,19 +52,21 @@
             </div>
           </div>
           <div class="user-block-element">
-            <a href="#" class="entrance">Вход</a>
+            <a href="#" class="user-block-btn entrance">Вход</a>
             <div class="popup">
               <form action="#">
                 <input type="email" placeholder="Электронная почта" class="entry-field">
                 <input type="password" placeholder="Пароль" class="entry-field">
                 <input type="submit" value="Войти" class="red-button">
-                <a href="#" class="no-password">Забыли пароль</a>
-                <a href="#" class="no-password">Новая регистрация</a>
+                <div class="no-password">
+                  <a href="#" class="no-password-item">Забыли пароль</a>
+                  <a href="#" class="no-password-item">Новая регистрация</a>
+                </div>
               </form>
             </div>
           </div>
           <div class="user-block-element">
-            <a href="#" class="basket">Пусто</a>
+            <a href="#" class="user-block-btn basket">Пусто</a>
           </div>
           <div class="work-time">
             С 10 до 20, ежедневно<br>
@@ -116,14 +118,14 @@
           <div class="free chocolate">
             <h2>Шоколадки даром!</h2>
             <p>
-              При опкупке 2 кг пломбира, добавим в ваш заказ упаковку
+              При покупке 2 кг пломбира, добавим в ваш заказ упаковку
               вкуснейшей шоколадно присыпки совершенно бесплатно.
             </p>
             <a href="#" class="red-button">Хочу шоколадки!</a>
           </div>
         </div>
         <ul class="products">
-          <li class="orange-citrus preview hit">
+          <li class="preview hit">
             <div class="basic">
               <img src="http://placehold.it/150x100" alt="Мороженое" width="100" height="100">
               <p class="price"><b>310&#8381;</b>/кг</p>
@@ -131,7 +133,7 @@
             </div>
             <a href="#" class="red-button">Быстрый просмотр</a>
           </li>
-          <li class="coffee-dark-chocolate preview hit">
+          <li class="preview hit">
             <div class="basic">
               <img src="http://placehold.it/150x100" alt="Мороженое" width="100" height="100">
               <div class="price"><b>380&#8381;</b>/кг</div>
@@ -139,7 +141,7 @@
             </div>
             <a href="#" class="red-button">Быстрый просмотр</a>
           </li>
-          <li class="strawberry-white-chocolate preview hit">
+          <li class="preview hit">
             <div class="basic">
               <img src="http://placehold.it/150x100" alt="Мороженое" width="100" height="100">
               <div class="price"><b>355&#8381;</b>/кг</div>
@@ -147,7 +149,7 @@
             </div>
             <a href="#" class="red-button">Быстрый просмотр</a>
           </li>
-          <li class="creme-brulee-caramel preview hit">
+          <li class="preview hit">
             <div class="basic">
               <img src="http://placehold.it/150x100" alt="Мороженое" width="100" height="100">
               <div class="price"><b>415&#8381;</b>/кг</div>
@@ -265,9 +267,9 @@
       <div class="popup">
         <form action="#">
           <h4>Мы обязательно вам ответим!</h4>
-          <input type="text" placeholder="Как вас зовут?"><br>
-          <input type="email" placeholder="Ваша почта для ответа"><br>
-          <textarea placeholder="Напишите что-нибудь..."></textarea><br>
+          <input type="text" placeholder="Как вас зовут?">
+          <input type="email" placeholder="Ваша почта для ответа">
+          <textarea placeholder="Напишите что-нибудь..."></textarea>
           <input type="submit" value="Отправить" class="red-button">
         </form>
       </div>
