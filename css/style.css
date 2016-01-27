@@ -2,16 +2,20 @@ body {
   font-size: 16px;
   line-height: 22px;
   color: #ffffff;
-  font-family: "Roboto Regular";
-}
-.slider-title {
-  font-size: 16px;
-  line-height: 60,35px;
-  font-weight: bold;
-  font-family: "Roboto Black";
+  font-family: Roboto, sans-serif;
 }
 h2 {
   font-size: 35px;
+  line-height: normal;/* Если в фотошопе только одна строка, то как
+  устанавливать этот элемент*/
   font-weight: bold;
-  font-family: "Roboto";
+  color: #ffffff;
+  font-family: Roboto, sans-serif;
+}
+h3 {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 500;/* В фотошопе написано медиум, что здесь ставить? */
+  color: #ffffff;
+  font-family: Roboto, sans-serif;
 }
