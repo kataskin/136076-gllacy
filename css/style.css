@@ -1,5 +1,5 @@
 body {
-/*  background: url("../img/gllacy-index-1200.png") no-repeat 50% 0;
+/*  background: url("../img/gllacy-catalog-1200.png") no-repeat 50% 0;
   background-size: 1200px auto;*/
   background-color: black;
   margin: 0;
@@ -19,11 +19,15 @@ body {
 /*!!!!!!!!!!!!!!!!!!!!!!!header!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 
 .main-header {
+  min-height: 120px;
   padding: 0;
 
   /*для сетки*/
-  min-height: 120px;
   outline: 2px solid red;
+}
+
+.indent {
+  margin-bottom: 527px;
 }
 
 .container {
@@ -78,8 +82,9 @@ body {
 }
 
 .column {
-  width: 560px;
-  min-height: 230px;
+  width: 520px;
+  min-height: 190px;
+  padding: 20px;
 
   /*для сетки*/
   outline: 2px solid red;
@@ -102,15 +107,18 @@ body {
 .products {
   margin-bottom: 40px;
   padding: 0;
+  font-size: 0px;
 
   /*для сетки*/
   outline: 2px solid magenta;
 }
 
 .preview {
-  float: left;
+  display: inline-block;
+  vertical-align: top;
   width: 267px;
   margin-right: 26px;
+  font-size: 16px;
 
   /*для сетки*/
   outline: 2px solid blue;
@@ -125,6 +133,7 @@ body {
   padding-left: 21px;
   padding-right: 21px;
   margin-bottom: 40px;
+  font-size: 0;
 
   /*для сетки*/
   outline: 2px solid blue;
@@ -132,6 +141,7 @@ body {
 
 .information {
   padding: 0;
+  padding-bottom: 3px;
   margin: 0;
 
   /*для сетки*/
@@ -140,10 +150,11 @@ body {
 
 .information li {
   display: inline-block;
-  width: 480px;
+  width: 483px;
   margin-right: 26px;
-  margin-bottom: 25px;
+  margin-bottom: 22px;
   padding-left: 56px;
+  font-size: 16px;
 
   /*для сетки*/
   outline: 2px solid yellow;
@@ -162,8 +173,8 @@ body {
 }
 
 .subscription-content {
-  padding-left: 21px;
-  padding-right: 21px;
+  padding-left: 20px;
+  padding-right: 20px;
   padding-top: 30px;
   padding-bottom: 36px;
 }
@@ -180,6 +191,41 @@ body {
   float: right;
   width: 304px;
   padding: 25px;
+
+  /*для сетки*/
+  outline: 2px solid yellow;
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!catalog.html!!!!!!!!!!!!!!!!!!!!*/
+
+.breadcrumbs {
+  margin: 0;
+  margin-bottom: 10px;
+
+  /*для сетки*/
+  outline: 2px solid yellow;
+}
+
+.filter {
+  float: left;
+  min-width: 195px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+.filter-background {
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+
+  /*для сетки*/
+  outline: 2px solid yellow;
+}
+
+.pages {
+  float: right;
+  width: 135px;
 
   /*для сетки*/
   outline: 2px solid yellow;
@@ -230,12 +276,24 @@ padding-top: 20px;
   display: none;
 }
 
+h1 {
+  margin-bottom: 35px;
+  /*для сетки*/
+  outline: 2px solid blue;
+}
+
 h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+
   font-size: 35px;
-  line-height: 42px;
-  font-weight: bold;
+  line-height: 35px;
+  font-weight: normal;
   color: #ffffff;
   font-family: Roboto, Arial, Helvetica, sans-serif;
+
+  /*для сетки*/
+  outline: 2px solid yellow;
 }
 h3 {
   margin-top: 0;
