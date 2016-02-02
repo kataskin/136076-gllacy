@@ -7,72 +7,75 @@
   </head>
   <body>
     <header class="main-header indent">
-      <div class="container clearfix">
-        <div class="logo">
-          <img src="img/logo/logo.png" alt="GllacyShop" width="153" height="63">
-        </div>
-        <nav class="main-navigation">
-          <ul>
-            <li class="navigation-item">
-              <a href="#">Каталог</a>
-              <div class="catalog">
-                <ul>
-                  <li class="new">
-                    <a href="#">Новинки</a>
-                  </li>
-                  <li>
-                    <a href="#">Сливочное</a>
-                  </li>
-                  <li>
-                    <a href="#">Щербеты</a>
-                  </li>
-                  <li>
-                    <a href="#">Фруктовый лед</a>
-                  </li>
-                  <li>
-                    <a href="#">Мелорин</a>
-                  </li>
-                </ul>
+      <div class="container">
+        <div class="for-flex clearfix">
+          <div class="logo">
+            <img src="img/logo/logo.png" alt="GllacyShop" width="153" height="63">
+          </div>
+          <div class="user-block">
+            <div class="user-block-element">
+              <a href="#" class="user-block-btn search">Поиск</a>
+              <div class="popup">
+                <form action="#">
+                  <input type="text" placeholder="Что ищем?" class="entry-field">
+                </form>
               </div>
-            </li>
-            <li class="navigation-item">
-              <a href="#">Доставка и оплата</a>
-            </li>
-            <li class="navigation-item">
-              <a href="#">О компании</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="user-block">
-          <div class="user-block-element">
-            <a href="#" class="user-block-btn search">Поиск</a>
-            <div class="popup">
-              <form action="#">
-                <input type="text" placeholder="Что ищем?" class="entry-field">
-              </form>
+            </div>
+            <div class="user-block-element">
+              <a href="#" class="user-block-btn entrance">Вход</a>
+              <div class="popup">
+                <form action="#">
+                  <input type="email" placeholder="Электронная почта" class="entry-field">
+                  <input type="password" placeholder="Пароль" class="entry-field">
+                  <input type="submit" value="Войти" class="red-button">
+                  <div class="no-password">
+                    <a href="#" class="no-password-item">Забыли пароль</a>
+                    <a href="#" class="no-password-item">Новая регистрация</a>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="user-block-element">
+              <a href="#" class="user-block-btn basket">Пусто</a>
+            </div>
+            <div class="work-time">
+              С 10 до 20, ежедневно<br>
+              <b>8 812 450-25-25</b>
             </div>
           </div>
-          <div class="user-block-element">
-            <a href="#" class="user-block-btn entrance">Вход</a>
-            <div class="popup">
-              <form action="#">
-                <input type="email" placeholder="Электронная почта" class="entry-field">
-                <input type="password" placeholder="Пароль" class="entry-field">
-                <input type="submit" value="Войти" class="red-button">
-                <div class="no-password">
-                  <a href="#" class="no-password-item">Забыли пароль</a>
-                  <a href="#" class="no-password-item">Новая регистрация</a>
+          <nav class="main-navigation">
+            <ul>
+              <li class="navigation-item">
+                <a href="#">Каталог</a>
+                <div class="catalog">
+                  <ul>
+                    <li class="new">
+                      <a href="#">Новинки</a>
+                    </li>
+                    <li>
+                      <a href="#">Сливочное</a>
+                    </li>
+                    <li>
+                      <a href="#">Щербеты</a>
+                    </li>
+                    <li>
+                      <a href="#">Фруктовый лед</a>
+                    </li>
+                    <li>
+                      <a href="#">Мелорин</a>
+                    </li>
+                  </ul>
                 </div>
-              </form>
-            </div>
-          </div>
-          <div class="user-block-element">
-            <a href="#" class="user-block-btn basket">Пусто</a>
-          </div>
-          <div class="work-time">
-            С 10 до 20, ежедневно<br>
-            <b>8 812 450-25-25</b>
-          </div>
+              </li>
+              <li class="navigation-item">
+                <a href="#">Доставка и оплата</a>
+              </li>
+              <li class="navigation-item">
+                <a href="#">О компании</a>
+              </li>
+            </ul>
+          </nav>
+
         </div>
       </div>
     </header>
@@ -110,7 +113,8 @@
         <input type="radio" name="switch" value="3">
     -->
       </div>
-    </div>    <main class="container">
+    </div>
+    <main class="container">
       <div class="columns clearfix">
         <div class="column left raspberries">
           <h2>Малинка даром!</h2>
@@ -214,58 +218,60 @@
           </div>
         </div>
       </div>
-      <div class="contacts">
-        <div class="contacts-detail">
-          <p>
-            Адрес главного офиса<br>
-            и офлайн магазина:<br>
-            <b>
-              ул. Большая Конюшенная<br>
-              19/8, Санкт-Петербург<br>
-            </b>
-          </p>
-          <p>
-            Для заказов по телефону:<br>
-            <b>8 812 450-25-25</b><br>
-            (с 10 до 20 ежедневно)<br>
-          </p>
-          <a href="#" class="red-button">Форма обратной связи</a>
-        </div>
-      </div>
     </main>
+    <div class="contacts">
+      <div class="contacts-detail">
+        <p>
+          Адрес главного офиса<br>
+          и офлайн магазина:<br>
+          <b>
+            ул. Большая Конюшенная<br>
+            19/8, Санкт-Петербург<br>
+          </b>
+        </p>
+        <p>
+          Для заказов по телефону:<br>
+          <b>8 812 450-25-25</b><br>
+          (с 10 до 20 ежедневно)<br>
+        </p>
+        <a href="#" class="red-button">Форма обратной связи</a>
+      </div>
+    </div>
     <footer class="main-footer">
-      <div class="container clearfix">
-        <div class="footer-social">
-          <div class="social twitter">
-            <a href="#">Твиттер</a>
+      <div class="container">
+        <div class="for-flex clearfix">
+          <div class="footer-social">
+            <div class="social twitter">
+              <a href="#">Твиттер</a>
+            </div>
+            <div class="social instagram">
+              <a href="#">Инстаграм</a>
+            </div>
+            <div class="social facebook">
+              <a href="#">Фэйсбук</a>
+            </div>
+            <div class="social vkontakte">
+              <a href="#">ВКонтакте</a>
+            </div>
           </div>
-          <div class="social instagram">
-            <a href="#">Инстаграм</a>
+          <ul class="footer-documents">
+            <li class="heart">
+              <a href="#">Для поставщиков</a>
+            </li>
+            <li>
+              <a href="#">О производстве</a>
+            </li>
+            <li>
+              <a href="#">Наши документы</a>
+            </li>
+            <li>
+              <a href="#">Экологические стандарты</a>
+            </li>
+          </ul>
+          <div class="footer-copyright">
+            <img src="img/logo/logo-html-academy.png" alt="HTML Academy" width="108" height="37">
+            <p>Сделано в <a href="#">HTML Academy</a> &copy; 2016</p>
           </div>
-          <div class="social facebook">
-            <a href="#">Фэйсбук</a>
-          </div>
-          <div class="social vkontakte">
-            <a href="#">ВКонтакте</a>
-          </div>
-        </div>
-        <ul class="footer-documents">
-          <li class="heart">
-            <a href="#">Для поставщиков</a>
-          </li>
-          <li>
-            <a href="#">О производстве</a>
-          </li>
-          <li>
-            <a href="#">Наши документы</a>
-          </li>
-          <li>
-            <a href="#">Экологические стандарты</a>
-          </li>
-        </ul>
-        <div class="footer-copyright">
-          <img src="img/logo/logo-html-academy.png" alt="HTML Academy" width="108" height="37">
-          <p>Сделано в <a href="#">HTML Academy</a> &copy; 2016</p>
         </div>
       </div>
     </footer>

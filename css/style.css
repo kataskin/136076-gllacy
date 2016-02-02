@@ -3,6 +3,7 @@ body {
   background-size: 1200px auto;*/
   background-color: black;
   margin: 0;
+  min-width: 900px;
 
   font-size: 16px;
   line-height: 22px;
@@ -31,27 +32,44 @@ body {
 }
 
 .container {
-  width: 1146px;
+  min-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
 
   /*для сетки*/
   outline: 2px solid green;
 }
 
+.for-flex {
+  padding: 0 2.3%;
+
+  /*для сетки*/
+  outline: 2px solid white;
+}
+
 .logo {
   display: block;
   float: left;
-  width: 145px;
+  width: 155px;
 
   /*для сетки*/
   outline: 2px solid yellow;
 }
 .main-navigation {
-  float: left;
-  width: 600px;
+  margin: 0 267px 0 155px;
 
   /*для сетки*/
   outline: 2px solid yellow;
+}
+
+.main-navigation ul {
+  margin: 0;
+  font-size: 0;
+}
+
+.navigation-item {
+  display: inline-block;
+  font-size: 16px;
 }
 
 .catalog {
@@ -64,6 +82,10 @@ body {
 
   /*для сетки*/
   outline: 2px solid yellow;
+}
+
+.user-block-element {
+  display: inline-block;
 }
 
 /*!!!!!!!!!!!!!!!!!!!!!!slider!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
@@ -82,8 +104,9 @@ body {
 }
 
 .column {
-  width: 520px;
+  width: 46.6%;
   min-height: 190px;
+  box-sizing: border-box;
   padding: 20px;
 
   /*для сетки*/
@@ -92,6 +115,7 @@ body {
 
 .left {
   float: left;
+  margin-left: 2.3%;
 
   /*для сетки*/
   outline: 2px solid red;
@@ -99,6 +123,7 @@ body {
 
 .right {
   float: right;
+  margin-right: 2.3%;
 
   /*для сетки*/
   outline: 2px solid red;
@@ -116,12 +141,16 @@ body {
 .preview {
   display: inline-block;
   vertical-align: top;
-  width: 267px;
-  margin-right: 26px;
+  width: 22.2%;
+  margin-right: 2.2%;
   font-size: 16px;
 
   /*для сетки*/
   outline: 2px solid blue;
+}
+
+.preview:nth-child(4n+1) {
+  margin-left: 2.3%;
 }
 
 .preview:nth-child(4n) {
@@ -129,11 +158,11 @@ body {
 }
 
 .information-on-production {
-  padding-top: 21px;
-  padding-left: 21px;
-  padding-right: 21px;
+  width: 95.4%;
+  margin-left: 2.3%;
+  margin-right: 2.3%;
+  padding-top: 20px;
   margin-bottom: 40px;
-  font-size: 0;
 
   /*для сетки*/
   outline: 2px solid blue;
@@ -141,8 +170,8 @@ body {
 
 .information {
   padding: 0;
-  padding-bottom: 3px;
   margin: 0;
+  font-size: 0;
 
   /*для сетки*/
   outline: 2px solid blue;
@@ -150,22 +179,35 @@ body {
 
 .information li {
   display: inline-block;
-  width: 483px;
-  margin-right: 26px;
-  margin-bottom: 22px;
-  padding-left: 56px;
+  box-sizing: border-box;
+  vertical-align: top;
+  width: 48.8%;
+  margin-bottom: 30px;
   font-size: 16px;
 
   /*для сетки*/
   outline: 2px solid yellow;
 }
 
+.information li:nth-child(2n+1) {
+  margin-right: 2.3%;
+  padding-left: 75px;
+}
+
+.information li:nth-child(2n) {
+  margin-right: 0;
+  padding-left: 55px;
+}
+
 .information li:nth-child(2n) {
     margin-right: 0;
 }
 
+.blog {
+  padding: 0;
+}
+
 .subscription {
-  width: 550px;
   padding: 5px;
 
   /*для сетки*/
@@ -201,16 +243,39 @@ body {
 .breadcrumbs {
   margin: 0;
   margin-bottom: 10px;
+  font-size: 0;
 
   /*для сетки*/
   outline: 2px solid yellow;
 }
 
+.breadcrumb {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 16px;
+
+  /*для сетки*/
+  outline: 2px solid blue;
+}
+
+.filters {
+  font-size: 0;
+}
+
 .filter {
-  float: left;
-  min-width: 195px;
+  display: inline-block;
+  vertical-align: top;
+  min-width: 140px;
   margin-right: 15px;
   margin-bottom: 15px;
+  font-size: 16px;
+
+  /*для сетки*/
+  outline: 2px solid magenta;
+}
+
+.filter:last-child {
+  vertical-align: bottom;
 }
 
 .filter-background {
@@ -252,7 +317,7 @@ padding-top: 20px;
 
 .footer-documents {
   float: left;
-  width: 560px;
+  width: 500px;
   margin: 0;
   padding: 0;
   margin-right: 26px;
@@ -298,6 +363,8 @@ h2 {
 h3 {
   margin-top: 0;
   margin-bottom: 25px;
+  margin-left: 20px;
+  margin-right: 20px;
 
   font-size: 24px;
   line-height: 30px;

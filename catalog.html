@@ -7,189 +7,192 @@
   </head>
   <body>
     <header class="main-header">
-      <div class="container clearfix">
-        <a href="#" class="logo">
-          <img src="img/logo/logo.png" alt="GllacyShop" width="153" height="63">
-        </a>
-        <nav class="main-navigation">
-          <ul>
-            <li class="navigation-item">
-              <a href="#" class="active">Каталог</a>
-              <div class="catalog">
-                <ul>
-                  <li class="new">
-                    <a href="#">Новинки</a>
-                  </li>
-                  <li>
-                    <a href="#">Сливочное</a>
-                  </li>
-                  <li>
-                    <a href="#">Щербеты</a>
-                  </li>
-                  <li>
-                    <a href="#">Фруктовый лед</a>
-                  </li>
-                  <li>
-                    <a href="#">Мелорин</a>
-                  </li>
-                </ul>
+      <div class="container">
+        <div class="for-flex clearfix">
+          <a href="#" class="logo">
+            <img src="img/logo/logo.png" alt="GllacyShop" width="153" height="63">
+          </a>
+          <div class="user-block">
+            <div class="user-block-element">
+              <a href="#" class="user-block-btn search">Поиск</a>
+              <div class="popup">
+                <form action="#">
+                  <input type="text" placeholder="Что ищем?" class="entry-field">
+                </form>
               </div>
-            </li>
-            <li class="navigation-item">
-              <a href="#">Доставка и оплата</a>
-            </li>
-            <li class="navigation-item">
-              <a href="#">О компании</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="user-block">
-          <div class="user-block-element">
-            <a href="#" class="user-block-btn search">Поиск</a>
-            <div class="popup">
-              <form action="#">
-                <input type="text" placeholder="Что ищем?" class="entry-field">
-              </form>
             </div>
-          </div>
-          <div class="user-block-element">
-            <a href="#" class="user-block-btn entrance">Вход</a>
-            <div class="popup">
-              <form action="#">
-                <input type="email" placeholder="Электронная почта" class="entry-field">
-                <input type="password" placeholder="Пароль" class="entry-field">
-                <input type="submit" value="Войти" class="red-button">
-                <div class="no-password">
-                  <a href="#" class="no-password-item">Забыли пароль</a>
-                  <a href="#" class="no-password-item">Новая регистрация</a>
+            <div class="user-block-element">
+              <a href="#" class="user-block-btn entrance">Вход</a>
+              <div class="popup">
+                <form action="#">
+                  <input type="email" placeholder="Электронная почта" class="entry-field">
+                  <input type="password" placeholder="Пароль" class="entry-field">
+                  <input type="submit" value="Войти" class="red-button">
+                  <div class="no-password">
+                    <a href="#" class="no-password-item">Забыли пароль</a>
+                    <a href="#" class="no-password-item">Новая регистрация</a>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="user-block-element">
+              <a href="#" class="user-block-btn basket">Пусто</a>
+              <div class="popup">
+                <div class="booking-elements">
+                  <table class="in-basket">
+                    <tr>
+                      <td>
+                        <a href="#" class="del">Крестик</a>
+                        <img src="img/products/mini-1.png" alt="Мороженое" width="33" height="33">
+                        <p>Пломбир с апельсиновым джемом</p>
+                      </td>
+                      <td>
+                        <p>1,5 кг <span class="gray">× 200 руб.</span></p>
+                      <td>
+                      <td>
+                        300 руб.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="#" class="del">Крестик</a>
+                        <img src="img/products/mini-3.png" alt="Мороженое" width="33" height="33">
+                        <p>Клубничный пломбир с присыпкой из белого шоколада</p>
+                      </td>
+                      <td>
+                        <p>1,5 кг <span class="gray">× 300 руб.</span></p>
+                      <td>
+                      <td>
+                        450 руб.
+                      </td>
+                    </tr>
+                  </table>
                 </div>
-              </form>
-            </div>
-          </div>
-          <div class="user-block-element">
-            <a href="#" class="user-block-btn basket">Пусто</a>
-            <div class="popup">
-              <div class="booking-elements">
-                <table class="in-basket">
-                  <tr>
-                    <td>
-                      <a href="#" class="del">Крестик</a>
-                      <img src="img/products/mini-1.png" alt="Мороженое" width="33" height="33">
-                      <p>Пломбир с апельсиновым джемом</p>
-                    </td>
-                    <td>
-                      <p>1,5 кг <span class="gray">× 200 руб.</span></p>
-                    <td>
-                    <td>
-                      300 руб.
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <a href="#" class="del">Крестик</a>
-                      <img src="img/products/mini-3.png" alt="Мороженое" width="33" height="33">
-                      <p>Клубничный пломбир с присыпкой из белого шоколада</p>
-                    </td>
-                    <td>
-                      <p>1,5 кг <span class="gray">× 300 руб.</span></p>
-                    <td>
-                    <td>
-                      450 руб.
-                    </td>
-                  </tr>
-                </table>
-              </div>
-              <div class="booking">
-                <p>Итог: 750 руб.</p>
-                <a href="#" class="red-button">Оформить заказ</a>
+                <div class="booking">
+                  <p>Итог: 750 руб.</p>
+                  <a href="#" class="red-button">Оформить заказ</a>
+                </div>
               </div>
             </div>
+            <div class="work-time">
+              С 10 до 20, ежедневно<br>
+              <b>8 812 450-25-25</b>
+            </div>
           </div>
-          <div class="work-time">
-            С 10 до 20, ежедневно<br>
-            <b>8 812 450-25-25</b>
-          </div>
+          <nav class="main-navigation">
+            <ul>
+              <li class="navigation-item">
+                <a href="#" class="active">Каталог</a>
+                <div class="catalog">
+                  <ul>
+                    <li class="new">
+                      <a href="#">Новинки</a>
+                    </li>
+                    <li>
+                      <a href="#">Сливочное</a>
+                    </li>
+                    <li>
+                      <a href="#">Щербеты</a>
+                    </li>
+                    <li>
+                      <a href="#">Фруктовый лед</a>
+                    </li>
+                    <li>
+                      <a href="#">Мелорин</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="navigation-item">
+                <a href="#">Доставка и оплата</a>
+              </li>
+              <li class="navigation-item">
+                <a href="#">О компании</a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
     </header>
-    <main class="container clearfix">
-      <ul class="breadcrumbs">
-        <li class="breadcrumb">
-          <a href="#">Главная</a>
-        </li>
-        <li class="breadcrumb">
-          <a href="#">Каталог</a>
-        </li>
-        <li class="breadcrumb">
-          Сливочное
-        </li>
-      </ul>
-      <h1>Сливочное мороженое</h1>
-      <form action="#" class="filters clearfix">
-        <div class="filter">
-          <h3>Сортировка:</h3>
-          <select class="sorting filter-background">
-            <option>по популярности</option>
-            <option>сначала недорогие</option>
-            <option>сначала дорогие</option>
-            <option>по жирности</option>
-          </select>
-        </div>
-        <div class="filter">
-          <h3>Цена: 100 руб. &ndash; 500 руб.</h3>
-          <input class="filter-background">
-        </div>
-        <div class="filter">
-          <h3>Жирность:</h3>
-          <div class="filter-line value filter-background">
-            <div class="filter-block">
-              <input type="radio" name="fatness" value="0" id="fat-0">
-              <label for="fat-0">0%</label>
-            </div>
-            <div class="filter-block">
-              <input type="radio" name="fatness" value="10" id="fat-10">
-              <label for="fat-10">до 10%</label>
-            </div>
-            <div class="filter-block">
-              <input type="radio" name="fatness" value="30" id="fat-30">
-              <label for="fat-30">до 30%</label>
-            </div>
-            <div class="filter-block">
-              <input type="radio" name="fatness" value="30-100" id="fat-100">
-              <label for="fat-100">выше 30%</label>
+    <main class="container">
+      <div class="for-flex clearfix">
+        <ul class="breadcrumbs">
+          <li class="breadcrumb">
+            <a href="#">Главная</a>
+          </li>
+          <li class="breadcrumb">
+            <a href="#">Каталог</a>
+          </li>
+          <li class="breadcrumb">
+            Сливочное
+          </li>
+        </ul>
+        <h1>Сливочное мороженое</h1>
+        <form action="#" class="filters">
+          <div class="filter">
+            <h3>Сортировка:</h3>
+            <select class="sorting filter-background">
+              <option>по популярности</option>
+              <option>сначала недорогие</option>
+              <option>сначала дорогие</option>
+              <option>по жирности</option>
+            </select>
+          </div>
+          <div class="filter">
+            <h3>Цена: 100 руб. &ndash; 500 руб.</h3>
+            <input class="filter-background">
+          </div>
+          <div class="filter">
+            <h3>Жирность:</h3>
+            <div class="filter-line value filter-background">
+              <div class="filter-block">
+                <input type="radio" name="fatness" value="0" id="fat-0">
+                <label for="fat-0">0%</label>
+              </div>
+              <div class="filter-block">
+                <input type="radio" name="fatness" value="10" id="fat-10">
+                <label for="fat-10">до 10%</label>
+              </div>
+              <div class="filter-block">
+                <input type="radio" name="fatness" value="30" id="fat-30">
+                <label for="fat-30">до 30%</label>
+              </div>
+              <div class="filter-block">
+                <input type="radio" name="fatness" value="30-100" id="fat-100">
+                <label for="fat-100">выше 30%</label>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="filter">
-          <h3>Наполнители:</h3>
-          <div class="filter-line filling filter-background">
-            <div class="filter-block">
-              <input type="checkbox" name="filling" id="chocolate">
-              <label for="chocolate">шоколадные</label>
-            </div>
-            <div class="filter-block">
-              <input type="checkbox" name="filling" id="sugar">
-              <label for="sugar">сахарные присыпки</label>
-            </div>
-            <div class="filter-block">
-              <input type="checkbox" name="filling" id="fruit">
-              <label for="fruit">фрукты</label>
-            </div>
-            <div class="filter-block">
-              <input type="checkbox" name="filling" id="syrup">
-              <label for="syrup">сиропы</label>
-            </div>
-            <div class="filter-block">
-              <input type="checkbox" name="filling" id="jam">
-              <label for="jam">джемы</label>
+          <div class="filter">
+            <h3>Наполнители:</h3>
+            <div class="filter-line filling filter-background">
+              <div class="filter-block">
+                <input type="checkbox" name="filling" id="chocolate">
+                <label for="chocolate">шоколадные</label>
+              </div>
+              <div class="filter-block">
+                <input type="checkbox" name="filling" id="sugar">
+                <label for="sugar">сахарные присыпки</label>
+              </div>
+              <div class="filter-block">
+                <input type="checkbox" name="filling" id="fruit">
+                <label for="fruit">фрукты</label>
+              </div>
+              <div class="filter-block">
+                <input type="checkbox" name="filling" id="syrup">
+                <label for="syrup">сиропы</label>
+              </div>
+              <div class="filter-block">
+                <input type="checkbox" name="filling" id="jam">
+                <label for="jam">джемы</label>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="filter">
-          <h3></h3>
-          <input type="submit" value="Применить" class="filters-btn filter-background">
-        </div>
-      </form>
+          <div class="filter">
+            <input type="submit" value="Применить" class="filters-btn filter-background">
+          </div>
+        </form>
+      </div>
       <ul class="products">
         <li class="preview">
           <div class="basic">
@@ -202,7 +205,7 @@
         <li class="preview">
           <div class="basic">
             <img src="img/products/2.png" alt="Мороженое" width="267" height="267">
-            <div class="price"><b>380&#8381;</b>/кг</div
+            <div class="price"><b>380&#8381;</b>/кг</div>
             <a href="#">Сливочно-кофейное с кусочками шоколада</a>
           </div>
           <a href="#" class="red-button">Быстрый просмотр</a>
@@ -288,53 +291,57 @@
           <a href="#" class="red-button">Быстрый просмотр</a>
         </li>
       </ul>
-      <div class="pages">
-        <div class="prev">
-        </div>
-        <span class="active-page">1</span>
-        <a href="#">2</a>
-        <a href="#">3</a>
-        <a href="#">4</a>
-        <a href="#">5</a>
-        <div class="next">
-          <a href="#">
-          </a>
+      <div class="for-flex clearfix">
+        <div class="pages">
+          <div class="prev">
+          </div>
+          <span class="active-page">1</span>
+          <a href="#">2</a>
+          <a href="#">3</a>
+          <a href="#">4</a>
+          <a href="#">5</a>
+          <div class="next">
+            <a href="#">
+            </a>
+          </div>
         </div>
       </div>
     </main>
     <footer class="main-footer">
-      <div class="container clearfix">
-        <div class="footer-social">
-          <div class="social twitter">
-            <a href="#">Твиттер</a>
+      <div class="container">
+        <div class="for-flex clearfix">
+          <div class="footer-social">
+            <div class="social twitter">
+              <a href="#">Твиттер</a>
+            </div>
+            <div class="social instagram">
+              <a href="#">Инстаграм</a>
+            </div>
+            <div class="social facebook">
+              <a href="#">Фэйсбук</a>
+            </div>
+            <div class="social vkontakte">
+              <a href="#">ВКонтакте</a>
+            </div>
           </div>
-          <div class="social instagram">
-            <a href="#">Инстаграм</a>
+          <ul class="footer-documents">
+            <li class="heart">
+              <a href="#">Для поставщиков</a>
+            </li>
+            <li>
+              <a href="#">О производстве</a>
+            </li>
+            <li>
+              <a href="#">Наши документы</a>
+            </li>
+            <li>
+              <a href="#">Экологические стандарты</a>
+            </li>
+          </ul>
+          <div class="footer-copyright">
+            <img src="img/logo/logo-html-academy.png" alt="HTML Academy" width="108" height="37">
+            <p>Сделано в <a href="#">HTML Academy</a> &copy; 2016</p>
           </div>
-          <div class="social facebook">
-            <a href="#">Фэйсбук</a>
-          </div>
-          <div class="social vkontakte">
-            <a href="#">ВКонтакте</a>
-          </div>
-        </div>
-        <ul class="footer-documents">
-          <li class="heart">
-            <a href="#">Для поставщиков</a>
-          </li>
-          <li>
-            <a href="#">О производстве</a>
-          </li>
-          <li>
-            <a href="#">Наши документы</a>
-          </li>
-          <li>
-            <a href="#">Экологические стандарты</a>
-          </li>
-        </ul>
-        <div class="footer-copyright">
-          <img src="img/logo/logo-html-academy.png" alt="HTML Academy" width="108" height="37">
-          <p>Сделано в <a href="#">HTML Academy</a> &copy; 2016</p>
         </div>
       </div>
     </footer>
