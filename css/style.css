@@ -252,6 +252,7 @@ body {
 .breadcrumb {
   display: inline-block;
   vertical-align: top;
+  margin-right: 20px;
   font-size: 16px;
 
   /*для сетки*/
@@ -299,7 +300,7 @@ body {
 /*!!!!!!!!!!!!!!!!!!!!!!!!!!footer!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 
 .main-footer {
-padding-top: 20px;
+padding-top: 35px;
 
   /*для сетки*/
   min-height: 120px;
@@ -308,28 +309,59 @@ padding-top: 20px;
 
 .footer-social {
   float: left;
-  width: 267px;
-  margin-right: 26px;
+  width: 22.2%;
+  margin-right: 2.2%;
+  font-size: 0;
 
   /*для сетки*/
   outline: 2px solid yellow;
+}
+
+.social {
+  display: inline-block;
+  margin-right: 12px;
+  font-size: 16px;
 }
 
 .footer-documents {
   float: left;
-  width: 500px;
+  width: 46.6%;
   margin: 0;
   padding: 0;
-  margin-right: 26px;
+  margin-right: 2.2%;
 
 
   /*для сетки*/
   outline: 2px solid yellow;
 }
 
+.footer-documents-list {
+  width: 350px;/*УТОЧНИТЬ!!!!*/
+  margin: 0 auto;
+  padding: 0;
+
+  /*для сетки*/
+  outline: 2px solid yellow;
+}
+
+.footer-documents-list li:nth-child(2n+1) {
+  float: left;
+  width: 143px;/*УТОЧНИТЬ!!!!*/
+
+  /*для сетки*/
+  outline: 2px solid red;
+}
+
+.footer-documents-list li:nth-child(2n) {
+  margin-left: 143px;/*УТОЧНИТЬ!!!!*/
+
+  /*для сетки*/
+  outline: 2px solid blue;
+}
+
 .footer-copyright {
   float: right;
-  width: 267px;
+  width: 22.2%;
 
   /*для сетки*/
   outline: 2px solid yellow;
