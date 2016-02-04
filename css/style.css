@@ -210,6 +210,11 @@ body {
   padding: 0;
 }
 
+.blog img {
+  width: 100%;
+  height: auto;
+}
+
 .subscription {
   padding: 5px;
 
