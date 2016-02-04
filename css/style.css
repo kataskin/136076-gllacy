@@ -69,6 +69,7 @@ body {
 
 .navigation-item {
   display: inline-block;
+  vertical-align: top;;
   font-size: 16px;
 }
 
@@ -86,6 +87,7 @@ body {
 
 .user-block-element {
   display: inline-block;
+  vertical-align: top;
 }
 
 /*!!!!!!!!!!!!!!!!!!!!!!slider!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
@@ -149,6 +151,11 @@ body {
   outline: 2px solid blue;
 }
 
+.preview img {
+  max-width: 100%;
+  height: auto;
+}
+
 .preview:nth-child(4n+1) {
   margin-left: 2.3%;
 }
@@ -197,10 +204,6 @@ body {
 .information li:nth-child(2n) {
   margin-right: 0;
   padding-left: 55px;
-}
-
-.information li:nth-child(2n) {
-    margin-right: 0;
 }
 
 .blog {
@@ -319,6 +322,7 @@ padding-top: 35px;
 
 .social {
   display: inline-block;
+  vertical-align: top;
   margin-right: 12px;
   font-size: 16px;
 }
@@ -339,24 +343,20 @@ padding-top: 35px;
   width: 350px;/*УТОЧНИТЬ!!!!*/
   margin: 0 auto;
   padding: 0;
+  font-size: 0;
 
   /*для сетки*/
   outline: 2px solid yellow;
 }
 
-.footer-documents-list li:nth-child(2n+1) {
-  float: left;
-  width: 143px;/*УТОЧНИТЬ!!!!*/
+.footer-documents-list li {
+  display: inline-block;
+  vertical-align: top;
+  width: 175px;/*УТОЧНИТЬ!!!!*/
+  font-size: 16px;
 
   /*для сетки*/
   outline: 2px solid red;
-}
-
-.footer-documents-list li:nth-child(2n) {
-  margin-left: 143px;/*УТОЧНИТЬ!!!!*/
-
-  /*для сетки*/
-  outline: 2px solid blue;
 }
 
 .footer-copyright {
