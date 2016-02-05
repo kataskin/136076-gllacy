@@ -1,6 +1,6 @@
 body {
-/*  background: url("../img/gllacy-catalog-1200.png") no-repeat 50% 0;
-  background-size: 1200px auto;*/
+background: url("../img/gllacy-index-1200.png") no-repeat 50% 0;
+  background-size: 1200px auto;
   background-color: black;
   margin: 0;
   min-width: 900px;
@@ -51,6 +51,8 @@ body {
   display: block;
   float: left;
   width: 155px;
+  margin-left: -7px;
+  padding-top: 8px;
 
   /*для сетки*/
   outline: 2px solid yellow;
@@ -64,13 +66,40 @@ body {
 
 .main-navigation ul {
   margin: 0;
+  padding: 0;
+  padding-left: 8px;
+  padding-top: 20px;
   font-size: 0;
+
+  /*для сетки*/
+  outline: 2px solid blue;
 }
 
 .navigation-item {
   display: inline-block;
-  vertical-align: top;;
+  vertical-align: top;
+}
+
+.navigation-item a {
+  display: block;
+  border-radius: 20px;
   font-size: 16px;
+  padding: 8px 14px;
+  font-weight: bold;
+  color: white;
+
+  /*для сетки*/
+  outline: 2px solid yellow;
+}
+
+.navigation-item a:hover {
+  background-color: #ffffff;
+  color: #333333;
+  opacity: ???????????????????????????????????????
+}
+
+.navigation-item .active {
+  background-color: #d07058;
 }
 
 .catalog {
@@ -80,14 +109,64 @@ body {
 .user-block {
   float: right;
   width: 267px;
+  padding-top: 22px;
 
   /*для сетки*/
   outline: 2px solid yellow;
 }
 
 .user-block-element {
-  display: inline-block;
-  vertical-align: top;
+  float: right;
+  min-width: 32px;
+  margin-bottom: 10px;
+}
+
+.user-block-btn {
+  display: block;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 45px;
+  padding-right: 14px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+
+  /*для сетки*/
+  outline: 2px solid red;
+}
+
+.search {
+  height: 32px;
+  width: 32px;
+  margin-right: 10px;
+  padding: 0;
+}
+
+.entrance {
+  margin-right: 10px;
+}
+
+.basket {
+  box-sizing: border-box;
+  min-width: 116px;
+}
+
+.work-time {
+  padding-top: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.work-time b {
+  font-size: 22px;
+  line-height: 24px;
+}
+
+.red-button {
+  display: block;
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 /*!!!!!!!!!!!!!!!!!!!!!!slider!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
@@ -107,9 +186,9 @@ body {
 
 .column {
   width: 46.6%;
-  min-height: 190px;
   box-sizing: border-box;
   padding: 20px;
+  padding-top: 14px;
 
   /*для сетки*/
   outline: 2px solid red;
@@ -131,6 +210,44 @@ body {
   outline: 2px solid red;
 }
 
+h2 {
+  margin: 0;
+  margin-bottom: 15px;
+  margin-left: -2px; /*Какая-то неведомая фигня!!!!*/
+  font-size: 35px;
+  line-height: 42px;
+  font-weight: bold;;
+  color: #ffffff;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+
+  /*для сетки*/
+  outline: 2px solid yellow;
+}
+
+.raspberries p,
+.chocolate p {
+  margin-bottom: 45px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 21px;
+}
+
+.column .red-button {
+  float: right; /*непонятно, почему блок видит этот фроат*/
+  min-width: 50px;
+  margin: 0;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  padding-left: 24px;
+  padding-right: 24px;
+
+  font-size: 18px;
+  line-height: 21px;
+
+  /*для сетки*/
+  outline: 2px solid yellow;
+}
+
 .products {
   margin-bottom: 40px;
   padding: 0;
@@ -143,6 +260,7 @@ body {
 .preview {
   display: inline-block;
   vertical-align: top;
+  position: relative;
   width: 22.2%;
   margin-right: 2.2%;
   font-size: 16px;
@@ -164,6 +282,60 @@ body {
   margin-right: 0;
 }
 
+.hit::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 2;
+  height: 61px;
+  width: 61px;
+  background-image: url("../img/icon/hit.png");
+}
+
+.basic {
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.price {
+  position: absolute;
+  bottom: 12px;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: bold;
+}
+
+.price b {
+  font-size: 45px;
+  line-height: 55px;
+  font-weight: bold;
+}
+
+.ice-cream-name {
+  display: block;
+  font-size: 16px;
+  line-height: 22px;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.preview .red-button {
+  display: none;
+  position: relative;
+  width: 140px;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 27px;
+  padding-right: 27px;
+  font-size: 15px;
+  line-height: 24px;
+
+  /*для сетки*/
+  outline: 2px solid yellow;
+}
+
 .information-on-production {
   width: 95.4%;
   margin-left: 2.3%;
@@ -175,8 +347,27 @@ body {
   outline: 2px solid blue;
 }
 
+
+h3 {
+  margin-top: 0;
+  margin-bottom: 21px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-top: 4px;
+
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 500;
+  color: #000000;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+
+  /*для сетки*/
+  outline: 2px solid red;
+}
+
 .information {
   padding: 0;
+  padding-bottom: 5px;
   margin: 0;
   font-size: 0;
 
@@ -186,11 +377,14 @@ body {
 
 .information li {
   display: inline-block;
+  position: relative;
   box-sizing: border-box;
   vertical-align: top;
   width: 48.8%;
-  margin-bottom: 30px;
+  margin-bottom: 21px;
   font-size: 16px;
+  line-height: 22px;
+  font-weight: 400; /*Уточнить!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 
   /*для сетки*/
   outline: 2px solid yellow;
@@ -203,20 +397,91 @@ body {
 
 .information li:nth-child(2n) {
   margin-right: 0;
-  padding-left: 55px;
+  padding-left: 56px;
+}
+
+.information .ice-cream::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -13px;
+  left: 20px;
+
+  width: 47px;
+  height: 47px;
+  background-image: url("../img/icon/ice-cream.png");
+}
+
+.information .cow::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -13px;
+  left: 0px;
+
+  width: 47px;
+  height: 47px;
+  background-image: url("../img/icon/cow.png");
+}
+
+.information .leaf::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -13px;
+  left: 20px;
+
+  width: 47px;
+  height: 47px;
+  background-image: url("../img/icon/leaf.png");
+}
+
+.information .thermometer::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -13px;
+  left: 0px;
+
+  width: 47px;
+  height: 47px;
+  background-image: url("../img/icon/thermometer.png");
 }
 
 .blog {
+  position: relative;
+}
+
+.blog p {
+  font-size: 16px;
+  color: #5a5a5a;
+
+  /*для сетки*/
+  outline: 2px solid blue;
+}
+
+.blog-post {
+  display: block; /*нужно сделать фон к тексту!!!!!!!!!!!!!!!!!!!!!!*/
+  width: 300px;
   padding: 0;
+  margin: 0;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: bold;
+  color: #353535;
 }
 
 .blog img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
   width: 100%;
   height: auto;
 }
 
 .subscription {
-  padding: 5px;
+  padding: 6px;
 
   /*для сетки*/
   outline: 2px solid blue;
@@ -225,8 +490,34 @@ body {
 .subscription-content {
   padding-left: 20px;
   padding-right: 20px;
-  padding-top: 30px;
+  padding-top: 28px;
   padding-bottom: 36px;
+  color: #5a5a5a;
+
+  /*для сетки*/
+  outline: 2px solid red;
+}
+
+.subscription-content p {
+  margin: 0;
+  margin-bottom: 36px;
+  padding: 0;
+}
+
+.subscription-content input[type="submit"] {
+  display: block;
+  float: right;     /*float видим блоками!!!!!!!!!!!!!!!!!!!!!!*/
+  width: 100px;
+}
+
+.subscription-content input[type="email"] {
+  display: block;
+  width: auto;
+  margin-right: 30px;
+  padding: 7px;
+  font-size: 16px;
+  line-height: 25px;
+  color: #999999;
 }
 
 .contacts {
@@ -384,33 +675,4 @@ h1 {
   margin-bottom: 35px;
   /*для сетки*/
   outline: 2px solid blue;
-}
-
-h2 {
-  margin-top: 0;
-  margin-bottom: 20px;
-
-  font-size: 35px;
-  line-height: 35px;
-  font-weight: normal;
-  color: #ffffff;
-  font-family: Roboto, Arial, Helvetica, sans-serif;
-
-  /*для сетки*/
-  outline: 2px solid yellow;
-}
-h3 {
-  margin-top: 0;
-  margin-bottom: 25px;
-  margin-left: 20px;
-  margin-right: 20px;
-
-  font-size: 24px;
-  line-height: 30px;
-  font-weight: 500;/* В фотошопе написано медиум, что здесь ставить? */
-  color: #ffffff;
-  font-family: Roboto, Arial, Helvetica, sans-serif;
-
-  /*для сетки*/
-  outline: 2px solid red;
 }
