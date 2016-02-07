@@ -1,7 +1,7 @@
 body {
-background: url("../img/gllacy-catalog-1200.png") no-repeat 50% 0;
-  background-size: 1200px auto;
-  background-color: black;
+  /*background: url("../img/gllacy-catalog-1200.png") no-repeat 50% 0;
+  background-size: 1200px auto;*/
+  background-color: #849d8f;
   margin: 0;
   min-width: 900px;
   font-size: 16px;
@@ -19,7 +19,7 @@ background: url("../img/gllacy-catalog-1200.png") no-repeat 50% 0;
 /*!!!!!!!!!!!!!!!!!!!!!!!!Sprite!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 
 .sprite {
-    background-image: url("../img/sprite.png");
+    background-image: url(spritesheet.png);
     background-repeat: no-repeat;
     display: block;
 }
@@ -27,57 +27,80 @@ background: url("../img/gllacy-catalog-1200.png") no-repeat 50% 0;
 .sprite-basket {
     width: 21px;
     height: 20px;
-    background-position: -5px -5px;
+    background-position: -10px -10px;
 }
 
 .sprite-basket-full {
     width: 15px;
     height: 10px;
-    background-position: -36px -5px;
+    background-position: -10px -50px;
+}
+
+.sprite-cow {
+    width: 49px;
+    height: 51px;
+    background-position: -10px -80px;
 }
 
 .sprite-entranc {
     width: 20px;
     height: 19px;
-    background-position: -61px -5px;
+    background-position: -10px -151px;
 }
 
 .sprite-facebook {
     width: 31px;
     height: 31px;
-    background-position: -36px -34px;
+    background-position: -10px -190px;
 }
 
 .sprite-heart {
     width: 15px;
     height: 13px;
-    background-position: -77px -34px;
+    background-position: -10px -241px;
+}
+
+.sprite-ice-cream {
+    width: 51px;
+    height: 51px;
+    background-position: -10px -274px;
 }
 
 .sprite-insta {
     width: 31px;
     height: 31px;
-    background-position: -102px -5px;
+    background-position: -10px -345px;
+}
+
+.sprite-leaf {
+    width: 51px;
+    height: 51px;
+    background-position: -10px -396px;
 }
 
 .sprite-search {
     width: 17px;
     height: 17px;
-    background-position: -5px -46px;
+    background-position: -10px -467px;
+}
+
+.sprite-thermometer {
+    width: 49px;
+    height: 51px;
+    background-position: -10px -504px;
 }
 
 .sprite-twitter {
     width: 31px;
     height: 31px;
-    background-position: -102px -46px;
+    background-position: -10px -575px;
 }
 
 .sprite-vkontakte {
     width: 31px;
     height: 31px;
-    background-position: -5px -87px;
+    background-position: -10px -626px;
 }
-
 
 /*!!!!!!!!!!!!!!!!!!!!!!!header!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 
@@ -126,7 +149,7 @@ background: url("../img/gllacy-catalog-1200.png") no-repeat 50% 0;
   outline: 2px solid yellow;
 }
 
-.main-navigation .navigation {
+.navigation {
   margin: 0;
   padding: 0;
   padding-left: 8px;
@@ -154,13 +177,18 @@ background: url("../img/gllacy-catalog-1200.png") no-repeat 50% 0;
   outline: 2px solid yellow;
 }
 
-.navigation-item a:hover {
-  background-color: #ffffff;
+.navigation-item:hover > a {
+  background-color: #f7f6f3;
   color: #333333;
-  opacity: ???????????????????????????????????????
 }
 
-.navigation-item > a:hover ~ .catalog { /*Невозможно передвинуть курсор вниз, список исчезает*/
+.navigation-item:active > a {
+  background-color: #f7f6f3;
+  color: #333333;
+  box-shadow: inset 0 2px 3px 0 #686868;
+}
+
+.navigation-item:hover .catalog {
   display: block;
 }
 
@@ -173,18 +201,17 @@ background: url("../img/gllacy-catalog-1200.png") no-repeat 50% 0;
   position: absolute;
   margin: 0;
   padding: 0;
-  margin-top: 10px;
+  padding-top: 10px;
   margin-left: -7px;
-  background-color: #f8f7f4;
-  border-radius: 5px;
 
   /*для сетки*/
   outline: 2px solid red;
 }
 
-.catalog a {
+.catalog a,
+.active-type div {
   display: block;
-  padding: 5px 20px;
+  padding: 5px 13px;
   font-size: 14px;
   line-height: 17px;
   color: #343434;
@@ -192,24 +219,46 @@ background: url("../img/gllacy-catalog-1200.png") no-repeat 50% 0;
   text-decoration: none;
 }
 
-.catalog .new { /*Как сделать полосочку снизу?*/
-  font-weight: bold;
+.catalog li {
+  padding-left: 7px;
+  padding-right: 7px;
+  background-color: #f8f7f4;
 }
 
-.catalog a:hover {
+.catalog li:first-child {
+  border-radius: 5px 5px 0 0;
+}
+
+.catalog li:last-child {
+  border-radius: 0 0 5px 5px;
+}
+
+.catalog .new {
+  font-weight: bold;
+  border-bottom: 1px solid #d1d0ce;
+}
+
+.catalog li:hover:not(.active-type) {
   background-color: #fbded7;
 }
 
-.catalog a:active {
+.catalog li:active:not(.active-type) {
   background-color: #f6b5a5;
 }
 
-/*Находимся на странице, какой селектор или псевдокласс?*/
+.catalog .active-type {
+  background-color: #d07058;
+}
+
+.active-type div {
+  color: #ffffff;
+}
 
 .user-block {
   float: right;
   width: 267px;
   padding-top: 22px;
+  text-align: right;
 
   /*для сетки*/
   outline: 2px solid yellow;
@@ -217,9 +266,17 @@ background: url("../img/gllacy-catalog-1200.png") no-repeat 50% 0;
 
 .user-block-element {
   position: relative;
-  float: right;
+  display: inline-block;
+  vertical-align: top;
   min-width: 32px;
   margin-bottom: 10px;
+
+  /*для сетки*/
+  outline: 2px solid blue;
+}
+
+.user-block-element:not(:first-child) {
+  margin-left: 5px;
 }
 
 .user-block-btn {
@@ -228,74 +285,76 @@ background: url("../img/gllacy-catalog-1200.png") no-repeat 50% 0;
   padding-bottom: 6px;
   padding-left: 45px;
   padding-right: 14px;
-  border-radius: 13px;
-  background-color: #a1b5aa; /*Прозрачность??????????????????????????*/
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
   color: #ffffff;
+  text-decoration: none;
   font-size: 14px;
+  line-height: 17px;
   font-weight: 500;
 
   /*для сетки*/
   outline: 2px solid red;
 }
 
+.user-block .user-block-btn:hover,
+.filter input[type="submit"]:hover {
+  color: #373737;
+  background-color: #f8f7f4;
+}
+
+.user-block-btn:before {
+content: "";
+display: block;
+position: absolute;
+background-image: url("../img/sprite.png");
+}
+
 .search {
   height: 32px;
   width: 32px;
-  margin-right: 10px;
   padding: 0;
 }
 
 .search::before {
-  content: "";
-  display: block;
-  position: absolute;
   top: 7px;
   left: 7px;
-  background-image: url(../img/sprite.png);
   background-repeat: no-repeat;
   width: 17px;
   height: 17px;
-  background-position: -5px -46px;
+  background-position: -10px -467px;
 }
 
 .entrance {
-  margin-right: 10px;
+  text-align: left;
 }
 
 .entrance::before {
-  content: "";
-  position: absolute;
   left: 15px;
-  display: block;
-  background-image: url(../img/sprite.png);
   background-repeat: no-repeat;
   width: 20px;
   height: 19px;
-  background-position: -61px -5px;
+  background-position: -10px -151px;
 }
 
 .basket {
-  box-sizing: border-box;
-  min-width: 116px;
+  width: 57px;
+  text-align: left;
 }
 
 .basket::before {
-  content: "";
-  display: block;
-  position: absolute;
   left: 15px;
-  background-image: url(../img/sprite.png);
   background-repeat: no-repeat;
   width: 21px;
   height: 20px;
-  background-position: -5px -5px;
+  background-position: -10px -10px;
 }
 
 .work-time {
   padding-top: 5px;
   font-size: 14px;
+  line-height: 24px;
   font-weight: bold;
-  text-align: right;
 }
 
 .work-time b {
@@ -303,10 +362,11 @@ background: url("../img/gllacy-catalog-1200.png") no-repeat 50% 0;
   line-height: 24px;
 }
 
-.red-button {
+.red-button { /*Добавить тень!!!!!!!!!!!!!!!!!*/
   display: block;
   padding: 10px 15px;
   border-radius: 50px;
+  border: 0 none;
   background-image: linear-gradient(to top, #e64a36, #f06742);
   color: #ffffff;
   font-weight: bold;
@@ -394,15 +454,16 @@ h2 {
 }
 
 .raspberries {
+  min-height: 180px;
   background-image: url("../img/background-img/raspberries-background.png");
 }
 
 .chocolate {
+  min-height: 180px;
   background-image: url("../img/background-img/chocolate-background.png");
 }
 
 .products {
-  margin-bottom: 40px;
   padding: 0;
   font-size: 0px;
 
@@ -416,11 +477,37 @@ h2 {
   position: relative;
   width: 22.2%;
   margin-right: 2.2%;
-  border-radius: 5px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
   font-size: 16px;
 
   /*для сетки*/
   outline: 2px solid blue;
+}
+
+.preview::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 100%;
+  height: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 60px;
+  border-radius: 5px;
+}
+
+.preview:hover::after {
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.preview:hover .basic,
+.preview:hover a {
+  z-index: 3;
 }
 
 .preview img {
@@ -440,7 +527,7 @@ h2 {
   content: "";
   display: block;
   position: absolute;
-  z-index: 2;
+  z-index: 4;
   height: 61px;
   width: 61px;
   background-image: url("../img/icon/hit.png");
@@ -467,6 +554,9 @@ h2 {
 
 .ice-cream-name {
   display: block;
+  position: relative;
+  padding-left: 5px;
+  padding-right: 5px;
   font-size: 16px;
   line-height: 22px;
   color: #ffffff;
@@ -474,26 +564,24 @@ h2 {
   text-align: center;
 }
 
-.preview .red-button { /*Как объединить светлый фон с этой кнопкой?, если position: absolute,
-   то кнопка выезжает за пределы элементов li*/
+.preview:hover .ice-cream-name {
+    text-decoration: none;
+}
+
+.preview .red-button {
   display: none;
   position: absolute;
-  width: 140px;
-  margin: 0 auto;
+  width: 100%;
   margin-top: 20px;
+  padding: 0;
   padding-top: 10px;
   padding-bottom: 10px;
-  padding-left: 27px;
-  padding-right: 27px;
   font-size: 15px;
   line-height: 24px;
+  text-align: center;
 
   /*для сетки*/
   outline: 2px solid yellow;
-}
-
-.preview:hover {
-  background-color: #a7b8ad; /*Что за цвет? Белый с прозрачностью? Как сделать?*/
 }
 
 .preview:hover .red-button {
@@ -567,52 +655,37 @@ h3 {
   padding-left: 56px;
 }
 
-.information .ice-cream::before {
+.information li::before {
   content: "";
   display: block;
   position: absolute;
+  width: 51px;
+  height: 51px;
+  background-image: url("../img/sprite.png");
+}
+
+.information .ice-cream::before {
   top: -13px;
   left: 20px;
-
-  width: 47px;
-  height: 47px;
-  background-image: url("../img/icon/ice-cream.png");
+  background-position: -10px -274px;
 }
 
 .information .cow::before {
-  content: "";
-  display: block;
-  position: absolute;
   top: -13px;
   left: 0px;
-
-  width: 47px;
-  height: 47px;
-  background-image: url("../img/icon/cow.png");
+  background-position: -10px -80px;
 }
 
 .information .leaf::before {
-  content: "";
-  display: block;
-  position: absolute;
   top: -13px;
   left: 20px;
-
-  width: 47px;
-  height: 47px;
-  background-image: url("../img/icon/leaf.png");
+  background-position: -10px -396px;
 }
 
 .information .thermometer::before {
-  content: "";
-  display: block;
-  position: absolute;
   top: -13px;
   left: 0px;
-
-  width: 47px;
-  height: 47px;
-  background-image: url("../img/icon/thermometer.png");
+  background-position: -10px -504px;
 }
 
 .blog {
@@ -693,16 +766,23 @@ h3 {
 
 .subscription-content input[type="submit"] {
   display: block;
-  float: right;     /*float видим блоками. Почему???!!!!!!!!!!!!!!!!!*/
-  box-sizing: content-box;
-  width: 90px;
+  float: right;
+  width: 130px;
+  height: 45px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 17px;
+  line-height: 22px;
 }
 
-.subscription-content input[type="email"] {/*Как растянуть на всю ширину
-  с отступом справа 130px - размер кнопки*/
+.text-box-container {
+  margin-right: 140px;
+}
+
+.subscription-content input[type="email"] {
   display: block;
-  width: auto;
-  margin-right: 130px;
+  box-sizing: border-box;
+  width: 100%;
   padding: 7px;
   font-size: 16px;
   line-height: 25px;
@@ -710,18 +790,25 @@ h3 {
 }
 
 .contacts {
-  height: 365px;
-  padding-top: 65px;
+  height: 430px;
 
   /*для сетки*/
   outline: 2px solid red;
 }
 
+.contacts .container {
+  position: relative;
+}
+
 .contacts-detail {
   position: absolute;
-  right: 400px;/*Относительно чего позиционировать и к какой точке привязывать?*/
+  top: 65px;
+  right: 2.3%;
   width: 254px;
-  padding: 25px;
+  padding-left: 22px;
+  padding-right: 22px;
+  padding-top: 13px;
+  padding-bottom: 30px;
   border-radius: 10px;
   background-color: #fefefe;
 
@@ -730,6 +817,7 @@ h3 {
 }
 
 .contacts-detail p {
+  margin-bottom: 20px;
   font-size: 14px;
   line-height: 20px;
   color: #343434;
@@ -755,7 +843,8 @@ h3 {
 
 .breadcrumbs {
   margin: 0;
-  margin-bottom: 10px;
+  padding: 0;
+  padding-top: 2px;
   font-size: 0;
 
   /*для сетки*/
@@ -766,13 +855,40 @@ h3 {
   display: inline-block;
   vertical-align: top;
   margin-right: 20px;
-  font-size: 16px;
+  font-size: 14px;
+  line-height: 17px;
+
+  /*для сетки*/
+  outline: 2px solid blue;
+}
+
+.breadcrumb a {
+  position: relative;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.breadcrumb a::after {
+  content: "»";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: -12px;
+}
+
+h1 {
+  margin-bottom: 24px;
+  margin-top: 0;
+  font-size: 35px;
+  line-height: 42px;
 
   /*для сетки*/
   outline: 2px solid blue;
 }
 
 .filters {
+  margin-bottom: 25px;
   font-size: 0;
 }
 
@@ -783,6 +899,7 @@ h3 {
   margin-right: 15px;
   margin-bottom: 15px;
   font-size: 16px;
+  line-height: 20px;
 
   /*для сетки*/
   outline: 2px solid magenta;
@@ -792,28 +909,102 @@ h3 {
   vertical-align: bottom;
 }
 
-.filter-background {
-  padding-right: 15px;
+h5 {
+  margin: 0;
+  margin-bottom: 10px;
   padding-left: 15px;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  font-size: 14px;
+  line-height: 17px;
+
+  /*для сетки*/
+  outline: 2px solid blue;
+}
+
+.filter-block {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+}
+
+.filter .user-block-btn {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+}
+
+.filter .filling,
+.filter .fat {
+  padding-right: 0;
+}
+
+.filling input,
+.fat input {
+  display: none;
+}
+
+.filling label,
+.fat label {
+  padding-left: 30px;
+  padding-right: 20px;
+}
+
+.filter input[type="submit"] {
+  box-sizing: border-box;
+  height: 37px;
+  padding-left: 27px;
+  padding-right: 27px;
+  border: 2px solid #ffffff;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+
+.filter .user-block-btn:active {
+  border: none;
+  background-color: #eaeaea;
+  box-shadow: inset 0 2px 3px 0 #686868;
+}
+
+.pages {
+  float: right;
+  width: 300px;
+  text-align: right;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-size: 0;
 
   /*для сетки*/
   outline: 2px solid yellow;
 }
 
-.pages {
-  float: right;
-  width: 135px;
+.page,
+.prev,
+.next {
+  display: inline-block;
+  vertical-align: top;
+  width: 26px;
+  height: 26px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 500;
+  color: #ffffff;
+  text-decoration: none;
+}
 
-  /*для сетки*/
-  outline: 2px solid yellow;
+.active-page {
+  border-radius: 15px;
+  color: #353535;
+  background-color: #ffffff;
 }
 
 /*!!!!!!!!!!!!!!!!!!!!!!!!!!footer!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 
 .main-footer {
-padding-top: 35px;
+padding-top: 18px;
 
   /*для сетки*/
   min-height: 120px;
@@ -838,60 +1029,34 @@ padding-top: 35px;
   vertical-align: top;
   margin-right: 11px;
   border-radius: 20px;
-  border: 4px solid #c2cec7; /*Что за цвет????????????????????????*/
+  border: 4px solid rgba(255, 255, 255, 0.5);
   font-size: 0;
 }
 
-.social a {
+.social::before {
+  content: "";
   display: block;
+  position: absolute;
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  width: 31px;
+  height: 31px;
 }
 
 .twitter::before {
-  content: "";
-  display: block;
-  position: absolute;
-  background-image: url("../img/sprite.png");
-  background-repeat: no-repeat;
-  display: block;
-  width: 31px;
-  height: 31px;
-  background-position: -102px -46px;
+  background-position: -10px -575px;
 }
 
 .instagram::before {
-  content: "";
-  display: block;
-  position: absolute;
-  background-image: url("../img/sprite.png");
-  background-repeat: no-repeat;
-  display: block;
-  width: 31px;
-  height: 31px;
-  background-position: -102px -5px;
+  background-position: -10px -345px;
 }
 
 .facebook::before {
-  content: "";
-  display: block;
-  position: absolute;
-  background-image: url("../img/sprite.png");
-  background-repeat: no-repeat;
-  display: block;
-  width: 31px;
-  height: 31px;
-  background-position: -36px -34px;
+  background-position: -10px -190px;
 }
 
 .vkontakte::before {
-  content: "";
-  display: block;
-  position: absolute;
-  background-image: url("../img/sprite.png");
-  background-repeat: no-repeat;
-  display: block;
-  width: 31px;
-  height: 31px;
-  background-position: -5px -87px;
+  background-position: -10px -626px;
 }
 
 .footer-documents {
@@ -907,7 +1072,7 @@ padding-top: 35px;
 }
 
 .footer-documents-list {
-  max-width: 310px;/*УТОЧНИТЬ!!!!*/
+  max-width: 307px;/*УТОЧНИТЬ!!!!*/
   margin: 0 auto;
   padding: 0;
   font-size: 0;
@@ -920,8 +1085,8 @@ padding-top: 35px;
   display: inline-block;
   vertical-align: top;
   padding: 0;
-  min-width: 143px;/*УТОЧНИТЬ!!!!*/
-  font-size: 16px;
+  padding-left: 2px;
+  min-width: 140px;/*УТОЧНИТЬ!!!!*/
 
   /*для сетки*/
   outline: 2px solid red;
@@ -933,23 +1098,49 @@ padding-top: 35px;
   color: #ffffff;
 }
 
+.footer-documents-list .heart {
+  position: relative;
+  font-weight: bold;
+}
+
+.footer-documents-list .heart::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -18px;
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  width: 15px;
+  height: 13px;
+  background-position: -10px -241px;
+}
+
 .footer-copyright {
   float: right;
   width: 22.2%;
   margin-right: 2.3%;
+  text-align: right;
+  font-size: 12px;
+  line-height: 15px;
 
   /*для сетки*/
   outline: 2px solid yellow;
+}
+
+.footer-copyright img {
+  margin-right: 80px;
+}
+
+.footer-copyright p {
+  margin-top: 3px;
+}
+
+.footer-copyright a {
+  color: #fefefe;
 }
 
 /*!!!!!!!!!!!!!!!!!!!!!!!!!!!popup!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 
 .popup {
   display: none;
-}
-
-h1 {
-  margin-bottom: 35px;
-  /*для сетки*/
-  outline: 2px solid blue;
 }

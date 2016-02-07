@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Главная</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,500&subset=latin,cyrillic" rel="stylesheet" type="text/css">
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
@@ -14,7 +16,12 @@
           </div>
           <div class="user-block">
             <div class="user-block-element">
-              <a href="#" class="user-block-btn basket">Пусто</a>
+              <a href="#" class="user-block-btn search"></a>
+              <div class="popup">
+                <form action="#">
+                  <input type="text" placeholder="Что ищем?" class="entry-field">
+                </form>
+              </div>
             </div>
             <div class="user-block-element">
               <a href="#" class="user-block-btn entrance">Вход</a>
@@ -31,12 +38,7 @@
               </div>
             </div>
             <div class="user-block-element">
-              <a href="#" class="user-block-btn search"></a>
-              <div class="popup">
-                <form action="#">
-                  <input type="text" placeholder="Что ищем?" class="entry-field">
-                </form>
-              </div>
+              <a href="#" class="user-block-btn basket">Пусто</a>
             </div>
             <div class="clearfix">
             </div>
@@ -214,45 +216,41 @@
             </p>
             <form action="#">
               <input type="submit" value="Отправить" class="red-button">
-              <input type="email" placeholder="Электронная почта">
+              <div class="text-box-container">
+                <input type="email" placeholder="Электронная почта" class="text-box">
+              </div>
             </form>
           </div>
         </div>
       </div>
     </main>
     <div class="contacts">
-      <div class="contacts-detail">
-        <p>
-          Адрес главного офиса<br>
-          и офлайн магазина:<br>
-          <b>
-            ул. Большая Конюшенная<br>
-            19/8, Санкт-Петербург<br>
-          </b>
-        </p>
-        <p>
-          Для заказов по телефону:<br>
-          <b>8 812 450-25-25</b><br>
-          (с 10 до 20 ежедневно)<br>
-        </p>
-        <a href="#" class="red-button">Форма обратной связи</a>
+      <div class="container">
+        <div class="contacts-detail">
+          <p>
+            Адрес главного офиса<br>
+            и офлайн магазина:<br>
+            <b>
+              ул. Большая Конюшенная<br>
+              19/8, Санкт-Петербург<br>
+            </b>
+          </p>
+          <p>
+            Для заказов по телефону:<br>
+            <b>8 812 450-25-25</b><br>
+            (с 10 до 20 ежедневно)<br>
+          </p>
+          <a href="#" class="red-button">Форма обратной связи</a>
+        </div>
       </div>
     </div>
     <footer class="main-footer">
       <div class="container clearfix">
         <div class="footer-social">
-          <div class="social twitter">
-            <a href="#">Твиттер</a>
-          </div>
-          <div class="social instagram">
-            <a href="#">Инстаграм</a>
-          </div>
-          <div class="social facebook">
-            <a href="#">Фэйсбук</a>
-          </div>
-          <div class="social vkontakte">
-            <a href="#">ВКонтакте</a>
-          </div>
+          <a href="#" class="social twitter">Твиттер</a>
+          <a href="#" class="social instagram">Инстаграм</a>
+          <a href="#" class="social facebook">Фэйсбук</a>
+          <a href="#" class="social vkontakte">ВКонтакте</a>
         </div>
         <div class="footer-documents">
           <ul class="footer-documents-list">
