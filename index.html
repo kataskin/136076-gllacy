@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Главная</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,500&subset=latin,cyrillic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&subset=latin,cyrillic" rel="stylesheet" type="text/css">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
@@ -19,21 +19,30 @@
               <a href="#" class="user-block-btn search"></a>
               <div class="popup">
                 <form action="#">
-                  <input type="text" placeholder="Что ищем?" class="entry-field">
+                  <input type="text" id="search" class="textarea">
+                  <div class="placeholder">
+                    <label for="search">Что ищем?</label>
+                  </div>
                 </form>
               </div>
             </div>
             <div class="user-block-element">
               <a href="#" class="user-block-btn entrance">Вход</a>
               <div class="popup">
-                <form action="#">
-                  <input type="email" placeholder="Электронная почта" class="entry-field">
-                  <input type="password" placeholder="Пароль" class="entry-field">
-                  <input type="submit" value="Войти" class="red-button">
+                <form action="#" class="clearfix">
+                  <input type="email" id="e-mail" class="textarea">
+                  <div class="placeholder">
+                    <label for="e-mail">Электронная почта</label>
+                  </div>
+                  <input type="password" id="password" class="textarea">
+                  <div class="placeholder">
+                    <label for="password">Пароль</label>
+                  </div>
                   <div class="no-password">
                     <a href="#" class="no-password-item">Забыли пароль</a>
                     <a href="#" class="no-password-item">Новая регистрация</a>
                   </div>
+                  <input type="submit" value="Войти" class="red-button">
                 </form>
               </div>
             </div>
@@ -56,7 +65,7 @@
                     <a href="#" class="new">Новинки</a>
                   </li>
                   <li>
-                    <a href="#">Сливочное</a>
+                    <a href="catalog.html">Сливочное</a>
                   </li>
                   <li>
                     <a href="#">Щербеты</a>
@@ -202,7 +211,9 @@
           <div class="blog-post">
             <p>Новое в нашем блоге</p>
             <a href="#">
-              10 способов сервировки фруктовых щербетов к столу
+              10 способов сервировки<br>
+              фруктовых щербетов<br>
+              к столу
             </a>
           </div>
         <img src="img/background-img/strawberry-background.png" alt="Вкусный сорбет" width="560" height="220">
@@ -278,8 +289,14 @@
       <div class="popup">
         <form action="#">
           <h4>Мы обязательно вам ответим!</h4>
-          <input type="text" placeholder="Как вас зовут?">
-          <input type="email" placeholder="Ваша почта для ответа">
+          <input type="text" id="person-name" class="textarea">
+          <div class="placeholder">
+            <label for="name">Как вас зовут?</label>
+          </div>
+          <input type="email" id="person-e-mail" class="textarea">
+          <div class="placeholder">
+            <label for="person-e-mail">Ваша почта для ответа?</label>
+          </div>
           <textarea placeholder="Напишите что-нибудь..."></textarea>
           <input type="submit" value="Отправить" class="red-button">
         </form>
