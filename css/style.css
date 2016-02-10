@@ -1,6 +1,6 @@
 body {
-  background: url("../img/gllacy-catalog-1200.png") no-repeat 50% 0;
-  background-size: 1200px auto;
+  /*background: url("../img/gllacy-index-1200.png") no-repeat 50% 0;
+  background-size: 1200px auto;*/
   background-color: #849d8f;
   margin: 0;
   min-width: 900px;
@@ -30,76 +30,124 @@ body {
     background-position: -10px -10px;
 }
 
+.sprite-basket-black {
+    width: 21px;
+    height: 20px;
+    background-position: -10px -50px;
+}
+
 .sprite-basket-full {
     width: 15px;
     height: 10px;
-    background-position: -10px -50px;
+    background-position: -10px -90px;
 }
 
 .sprite-cow {
     width: 49px;
     height: 51px;
-    background-position: -10px -80px;
+    background-position: -10px -120px;
 }
 
 .sprite-entranc {
     width: 20px;
     height: 19px;
-    background-position: -10px -151px;
+    background-position: -10px -191px;
+}
+
+.sprite-entranc-black {
+    width: 20px;
+    height: 19px;
+    background-position: -10px -230px;
 }
 
 .sprite-facebook {
     width: 31px;
     height: 31px;
-    background-position: -10px -190px;
+    background-position: -10px -269px;
+}
+
+.sprite-facebook-active {
+    width: 31px;
+    height: 31px;
+    background-position: -10px -320px;
 }
 
 .sprite-heart {
     width: 15px;
     height: 13px;
-    background-position: -10px -241px;
+    background-position: -10px -371px;
+}
+
+.sprite-hit {
+    width: 61px;
+    height: 61px;
+    background-position: -10px -404px;
 }
 
 .sprite-ice-cream {
     width: 51px;
     height: 51px;
-    background-position: -10px -274px;
+    background-position: -10px -485px;
 }
 
 .sprite-insta {
     width: 31px;
     height: 31px;
-    background-position: -10px -345px;
+    background-position: -10px -556px;
+}
+
+.sprite-insta-active {
+    width: 31px;
+    height: 31px;
+    background-position: -10px -607px;
 }
 
 .sprite-leaf {
     width: 51px;
     height: 51px;
-    background-position: -10px -396px;
+    background-position: -10px -658px;
 }
 
 .sprite-search {
     width: 17px;
     height: 17px;
-    background-position: -10px -467px;
+    background-position: -10px -729px;
+}
+
+.sprite-search-black {
+    width: 17px;
+    height: 17px;
+    background-position: -10px -766px;
 }
 
 .sprite-thermometer {
     width: 49px;
     height: 51px;
-    background-position: -10px -504px;
+    background-position: -10px -803px;
 }
 
 .sprite-twitter {
+    width: 34px;
+    height: 32px;
+    background-position: -10px -874px;
+}
+
+.sprite-twitter-active {
     width: 31px;
     height: 31px;
-    background-position: -10px -575px;
+    background-position: -10px -926px;
 }
 
 .sprite-vkontakte {
     width: 31px;
     height: 31px;
-    background-position: -10px -626px;
+    background-position: -10px -977px;
+}
+
+.sprite-vkontakte-active {
+    width: 31px;
+    height: 31px;
+    background-position: -10px -1028px;
 }
 
 /*!!!!!!!!!!!!!!!!!!!!!!!header!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
@@ -198,13 +246,22 @@ body {
 }
 
 .catalog {
-  z-index: 1;
   display: none;
+  padding-top: 10px;
+  margin-left: -7px;
+
+  /*для сетки*/
+  outline: 2px solid blue;
+}
+
+.catalog ul {
+  z-index: 1;
   position: absolute;
   margin: 0;
   padding: 0;
-  padding-top: 10px;
-  margin-left: -7px;
+  background-color: #f8f7f4;
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
 
   /*для сетки*/
   outline: 2px solid red;
@@ -227,18 +284,9 @@ body {
 .catalog li {
   padding-left: 7px;
   padding-right: 7px;
-  background-color: #f8f7f4;
 
   /*Для сетки*/
   outline: 2px solid red;
-}
-
-.catalog li:first-child {
-  border-radius: 5px 5px 0 0;
-}
-
-.catalog li:last-child {
-  border-radius: 0 0 5px 5px;
 }
 
 .catalog .new {
@@ -287,11 +335,15 @@ body {
   margin-left: 5px;
 }
 
+.user-block-element:hover .popup {
+  display: block;
+}
+
 .user-block-btn {
   display: block;
   position: relative;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  padding-top: 8px;
+  padding-bottom: 7px;
   padding-left: 45px;
   padding-right: 14px;
   border-radius: 20px;
@@ -306,7 +358,7 @@ body {
   outline: 2px solid red;
 }
 
-.user-block .user-block-btn:hover,
+.user-block-element:hover .user-block-btn,
 .filter input[type="submit"]:hover {
   color: #373737;
   background-color: #f8f7f4;
@@ -331,14 +383,15 @@ background-repeat: no-repeat;
   left: 7px;
   width: 17px;
   height: 17px;
-  background-position: -10px -467px;
+  background-position: -10px -729px;
 }
 
-.entrance-item:hover .popup {
-  display: block;
+.user-block-element:hover .search::before {
+  background-position: -10px -766px;
 }
 
 .popup {
+  z-index: 1;
   position: absolute;
   padding-top: 4px;
   right: 0;
@@ -348,13 +401,14 @@ background-repeat: no-repeat;
 }
 
 .popup form {
-  width: 273px;
-  padding-top: 21px;
+  width: 241px;
+  padding-top: 0;
   padding-right: 16px;
   padding-bottom: 15px;
   padding-left: 16px;
   border-radius: 5px;
   background-color: #f8f7f4;
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
 }
 
 .textarea {
@@ -370,6 +424,9 @@ background-repeat: no-repeat;
   font-size: 16px;
   line-height: 24px;
   font-weight: bold;
+
+  /*Для сетки*/
+  outline: 2px solid red;
 }
 
 .placeholder {
@@ -396,6 +453,11 @@ background-repeat: no-repeat;
   color: #5b9ddf;
 }
 
+.search-item form {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
 .entrance {
   text-align: left;
 }
@@ -404,7 +466,15 @@ background-repeat: no-repeat;
   left: 15px;
   width: 20px;
   height: 19px;
-  background-position: -10px -151px;
+  background-position: -10px -191px;
+}
+
+.user-block-element:hover  .entrance::before {
+  background-position: -10px -230px;
+}
+
+.entrance-item form {
+  padding-top: 11px;
 }
 
 .no-password {
@@ -419,16 +489,129 @@ background-repeat: no-repeat;
   color: #333333;
 }
 
+.popup .red-button {
+  height: 35px;
+  font-size: 15px;
+  line-height: 35px;
+  padding-left: 28px;
+  padding-right: 28px;
+}
+
 .basket {
-  width: 57px;
+  width: 71px;
+  padding-right: 0;
   text-align: left;
 }
 
 .basket::before {
+  z-index: 1;
   left: 15px;
   width: 21px;
   height: 20px;
   background-position: -10px -10px;
+}
+
+.basket-full::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: url("../img/sprite.png");
+  width: 15px;
+  height: 10px;
+  background-position: -10px -90px;
+  left: 20px;
+  top: 12px;
+}
+
+.user-block-element:hover .basket::before {
+  z-index: 1;
+  background-position: -10px -50px;
+}
+
+.basket-item {
+  width: 510px;
+  padding: 15px;
+  color: #333333;
+  font-size: 13px;
+  line-height: 17px;
+  border-radius: 5px;
+  background-color: #f8f7f4;
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+}
+
+.in-basket {
+  width: 100%;
+  border-bottom: 1px solid #cacac7;
+  text-align: left;
+}
+
+.in-basket td {
+  position: relative;
+}
+
+.del {
+  display: block;
+  position: absolute;
+  font-size: 0;
+}
+
+.del::before,
+.del::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 25px;
+  width: 15px;
+  border-top: 1px solid #333333;
+}
+
+.del::before {
+  transform: rotate(45deg);
+}
+
+.del::after {
+  transform: rotate(-45deg);
+}
+
+.in-basket img {
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 24px;
+  padding-right: 14px;
+}
+
+.in-basket .ice-cream-buy {
+  display: inline-block;
+  vertical-align: top;
+  width: 230px;
+  margin-top: 17px;
+}
+
+.products-count {
+  width: 130px;
+  text-align: center;
+}
+
+.price-item {
+  text-align: center;
+}
+
+.in-basket .gray {
+  color: #808080;
+}
+
+.booking p {
+  font-size: 15px;
+  line-height: 18px;
+  color: #333333;
+  font-weight: bold;
+}
+
+.booking .red-button {
+  display: inline-block;
+  vertical-align: top;
 }
 
 .work-time {
@@ -444,12 +627,13 @@ background-repeat: no-repeat;
   font-weight: 900;
 }
 
-.red-button { /*Добавить тень!!!!!!!!!!!!!!!!!*/
+.red-button {
   display: block;
-  padding: 10px 15px;
+  padding: 0;
   border-radius: 50px;
   border: 0 none;
   background-image: linear-gradient(to top, #e64a36, #f06742);
+  text-align: center;
   color: #ffffff;
   font-weight: bold;
   text-decoration: none;
@@ -482,8 +666,10 @@ background-repeat: no-repeat;
 }
 
 .column {
+  position: relative;
   width: 46.6%;
   box-sizing: border-box;
+  min-height: 220px;
   padding: 20px;
   padding-top: 14px;
   border-radius: 15px;
@@ -511,7 +697,7 @@ background-repeat: no-repeat;
 h2 {
   margin: 0;
   margin-bottom: 15px;
-  margin-left: -2px; /*Какая-то неведомая фигня, но иначе не совпадает)!!!!*/
+  margin-left: -2px;
   font-size: 35px;
   line-height: 42px;
   font-weight: bold;;
@@ -524,21 +710,19 @@ h2 {
 
 .raspberries p,
 .chocolate p {
-  margin-bottom: 45px;
   font-size: 18px;
   font-weight: bold;
   line-height: 21px;
 }
 
 .column .red-button {
-  float: right; /*непонятно, почему блок видит этот флоат*/
-  min-width: 50px;
-  margin: 0;
+  position: absolute;
+  bottom: 23px;
+  right: 20px;
   padding-top: 13px;
   padding-bottom: 13px;
   padding-left: 24px;
   padding-right: 24px;
-
   font-size: 18px;
   line-height: 21px;
 
@@ -547,12 +731,12 @@ h2 {
 }
 
 .raspberries {
-  min-height: 180px;
+  height: 230px;
   background-image: url("../img/background-img/raspberries-background.png");
 }
 
 .chocolate {
-  min-height: 180px;
+  height: 230px;
   background-image: url("../img/background-img/chocolate-background.png");
 }
 
@@ -622,7 +806,8 @@ h2 {
   top: 0;
   height: 61px;
   width: 61px;
-  background-image: url("../img/icon/hit.png");
+  background-image: url("../img/sprite.png");
+  background-position: -10px -404px;
 }
 
 .basic {
@@ -630,12 +815,13 @@ h2 {
   margin-bottom: 8px;
 }
 
-.price { /*Добавить тень!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+.price {
   position: absolute;
   bottom: 12px;
   font-size: 30px;
   line-height: 36px;
   font-weight: bold;
+  text-shadow: 0 1px 3px rgba(49, 50, 53, 0.5);
 }
 
 .price b {
@@ -758,40 +944,50 @@ h3 {
 .information .ice-cream::before {
   top: -13px;
   left: 20px;
-  background-position: -10px -274px;
+  background-position: -10px -485px;
 }
 
 .information .cow::before {
   top: -13px;
   left: 0px;
-  background-position: -10px -80px;
+  background-position: -10px -120px;
 }
 
 .information .leaf::before {
   top: -13px;
   left: 20px;
-  background-position: -10px -396px;
+  background-position: -10px -658px;
 }
 
 .information .thermometer::before {
   top: -13px;
   left: 0px;
-  background-position: -10px -504px;
+  background-position: -10px -803px;
 }
 
 .blog {
   position: relative;
   padding: 0;
+  overflow: hidden;
+}
+
+.blog img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  height: 100%;
+  width: auto;
 }
 
 .blog-post {
-  position: absolute;
+  position: relative;
   left: 20px;
   right: 20px;
   padding: 0;
   margin: 0;
   font-size: 24px;
-  line-height: 30px;
+  line-height: 29px;
   font-weight: bold;
   color: #353535;
 }
@@ -807,19 +1003,13 @@ h3 {
 }
 
 .blog-post a {
-  padding: 0;
-  margin: 0;
+  padding-right: 10px;
   font-size: 24px;
-  line-height: 30px;
+  line-height: 29px;
   font-weight: bold;
   color: #353535;
- /*нужно сделать фон к тексту!!!!!!!!!!!!!!!!!!!!!!*/
-}
-
-.blog img {
-  display: block;
-  width: 100%;
-  height: auto;
+  background-color: rgba(255, 255, 255, 0.8);
+  outline: 10px solid rgba(255, 255, 255, 0.8);
 }
 
 .subscription {
@@ -831,10 +1021,12 @@ h3 {
 }
 
 .subscription-content {
+  box-sizing: border-box;
+  min-height: 208px;
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 28px;
-  padding-bottom: 36px;
+  padding-bottom: 26px;
   border-radius: 10px;
   background-color: #f8f7f4;
   color: #5a5a5a;
@@ -844,20 +1036,23 @@ h3 {
 }
 
 .subscription-content p {
+  min-height: 80px;
   margin: 0;
-  margin-bottom: 36px;
+  margin-bottom: 16px;
   padding: 0;
 }
 
-.subscription-content input[type="submit"] {
+.subscription-content .red-button {
+  position: static;
   display: block;
   float: right;
-  width: 130px;
-  height: 45px;
+  min-width: 120px;
+  height: 44px;
+  padding: 0;
   padding-left: 20px;
   padding-right: 20px;
   font-size: 17px;
-  line-height: 22px;
+  line-height: 44px;
 }
 
 .text-box-container {
@@ -873,6 +1068,18 @@ h3 {
   line-height: 25px;
   color: #999999;
 }
+
+.contacts {
+  height: 430px;
+
+  /*для сетки*/
+  outline: 2px solid red;
+}
+
+.contacts .container {
+  position: relative;
+}
+
 
 .contacts {
   height: 430px;
@@ -917,7 +1124,8 @@ h3 {
 .contacts-detail .red-button {
   text-align: center;
   box-sizing: border-box;
-  min-height: 45px;
+  min-height: 44px;
+  line-height: 44px;
 }
 
 /*!!!!!!!!!!!!!!!!!!!!!!!!!!catalog.html!!!!!!!!!!!!!!!!!!!!*/
@@ -1037,8 +1245,70 @@ h5 {
 
 .filling label,
 .fat label {
+  position: relative;
   padding-left: 30px;
   padding-right: 20px;
+}
+
+.filter-line label::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  box-sizing: border-box;
+  border: 1px solid #ffffff;
+}
+
+input[name="fatness"]:disabled + label::before,
+input[name="filling"]:disabled + label::before {
+  border: 1px solid #b2c1b7;
+}
+
+.fat label::before {
+  border-radius: 50%;
+}
+
+input[name="fatness"]:checked + label::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: 4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+input[name="fatness"]:disabled:checked + label::after {
+  background-color: #b2c1b7;
+}
+
+.filling label::before {
+  border-radius: 3px;
+}
+
+input[name="filling"]:checked + label::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 5px;
+  border-left: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  transform: rotate(-45deg);
+}
+
+input[name="filling"]:disabled:checked + label::after {
+  border-left: 2px solid #b2c1b7;
+  border-bottom: 2px solid #b2c1b7;
+}
+
+.filter-block:hover label::before {
+  border: 2px solid #ffffff;
 }
 
 .filter input[type="submit"] {
@@ -1210,19 +1480,35 @@ padding-top: 18px;
 }
 
 .twitter::before {
-  background-image: url("../img/icon/twitter.png");
+  background-position: -10px -874px;
+}
+
+.twitter:active::before {
+  background-position: -10px -926px;
 }
 
 .instagram::before {
-  background-position: -10px -345px;
+  background-position: -10px -556px;
+}
+
+.instagram:active::before {
+  background-position: -10px -607px;
 }
 
 .facebook::before {
-  background-position: -10px -190px;
+  background-position: -10px -269px;
+}
+
+.facebook:active::before {
+  background-position: -10px -320px;
 }
 
 .vkontakte::before {
-  background-position: -10px -626px;
+  background-position: -10px -977px;
+}
+
+.vkontakte:active::before {
+  background-position: -10px -1028px;
 }
 
 .footer-documents {
@@ -1285,7 +1571,7 @@ padding-top: 18px;
   background-repeat: no-repeat;
   width: 15px;
   height: 13px;
-  background-position: -10px -241px;
+  background-position: -10px -371px;
 }
 
 .footer-copyright {

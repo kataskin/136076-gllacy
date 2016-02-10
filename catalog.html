@@ -17,7 +17,7 @@
           <div class="user-block">
             <div class="user-block-element">
               <a href="#" class="user-block-btn search"></a>
-              <div class="popup">
+              <div class="popup search-item">
                 <form action="#">
                   <input type="text" id="search" class="textarea">
                   <div class="placeholder">
@@ -26,9 +26,9 @@
                 </form>
               </div>
             </div>
-            <div class="user-block-element entrance-item">
+            <div class="user-block-element">
               <a href="#" class="user-block-btn entrance">Вход</a>
-              <div class="popup">
+              <div class="popup entrance-item">
                 <form action="#">
                   <input type="email" id="e-mail" class="textarea">
                   <div class="placeholder">
@@ -47,41 +47,43 @@
               </div>
             </div>
             <div class="user-block-element">
-              <a href="#" class="user-block-btn basket">Пусто</a>
+              <a href="#" class="user-block-btn basket basket-full">2 товара</a>
               <div class="popup">
-                <div class="booking-elements">
-                  <table class="in-basket">
-                    <tr>
-                      <td>
-                        <a href="#" class="del">Крестик</a>
-                        <img src="img/products/mini-1.png" alt="Мороженое" width="33" height="33">
-                        <p>Пломбир с апельсиновым джемом</p>
-                      </td>
-                      <td>
-                        <p>1,5 кг <span class="gray">× 200 руб.</span></p>
-                      <td>
-                      <td>
-                        300 руб.
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <a href="#" class="del">Крестик</a>
-                        <img src="img/products/mini-3.png" alt="Мороженое" width="33" height="33">
-                        <p>Клубничный пломбир с присыпкой из белого шоколада</p>
-                      </td>
-                      <td>
-                        <p>1,5 кг <span class="gray">× 300 руб.</span></p>
-                      <td>
-                      <td>
-                        450 руб.
-                      </td>
-                    </tr>
-                  </table>
-                </div>
-                <div class="booking">
-                  <p>Итог: 750 руб.</p>
-                  <a href="#" class="red-button">Оформить заказ</a>
+                <div class="basket-item">
+                  <div class="booking-elements">
+                    <table class="in-basket">
+                      <tr>
+                        <td>
+                          <a href="#" class="del">Крестик</a>
+                          <img src="img/products/mini-1.png" alt="Мороженое" width="33" height="33">
+                          <p class="ice-cream-buy">Пломбир с апельсиновым джемом</p>
+                        </td>
+                        <td class="products-count">
+                          <p>1,5 кг <span class="gray">× 200 руб.</span></p>
+                        <td>
+                        <td class="price-item">
+                          300 руб.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <a href="#" class="del">Крестик</a>
+                          <img src="img/products/mini-3.png" alt="Мороженое" width="33" height="33">
+                          <p class="ice-cream-buy">Клубничный пломбир с присыпкой из белого шоколада</p>
+                        </td>
+                        <td class="products-count">
+                          <p>1,5 кг <span class="gray">× 300 руб.</span></p>
+                        <td>
+                        <td class="price-item">
+                          450 руб.
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                  <div class="booking">
+                    <p>Итого: 750 руб.</p>
+                    <a href="#" class="red-button">Оформить заказ</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -94,23 +96,25 @@
             <ul class="navigation">
               <li class="navigation-item">
                 <a href="#" class="active">Каталог</a>
-                <ul class="catalog">
-                  <li class="new">
-                    <a href="#">Новинки</a>
-                  </li>
-                  <li class="active-type">
-                    <div>Сливочное</div>
-                  </li>
-                  <li>
-                    <a href="#">Щербеты</a>
-                  </li>
-                  <li>
-                    <a href="#">Фруктовый лед</a>
-                  </li>
-                  <li>
-                    <a href="#">Мелорин</a>
-                  </li>
-                </ul>
+                <div class="catalog">
+                  <ul>
+                    <li class="new">
+                      <a href="#">Новинки</a>
+                    </li>
+                    <li class="active-type">
+                      <div>Сливочное</div>
+                    </li>
+                    <li>
+                      <a href="#">Щербеты</a>
+                    </li>
+                    <li>
+                      <a href="#">Фруктовый лед</a>
+                    </li>
+                    <li>
+                      <a href="#">Мелорин</a>
+                    </li>
+                  </ul>
+                </div>
               </li>
               <li class="navigation-item">
                 <a href="#">Доставка и оплата</a>
@@ -175,11 +179,11 @@
             <h5>Наполнители:</h5>
             <div class="filter-line filling user-block-btn">
               <div class="filter-block">
-                <input type="checkbox" name="filling" id="chocolate">
+                <input type="checkbox" name="filling" id="chocolate" checked>
                 <label for="chocolate">шоколадные</label>
               </div>
               <div class="filter-block">
-                <input type="checkbox" name="filling" id="sugar">
+                <input type="checkbox" name="filling" id="sugar" checked>
                 <label for="sugar">сахарные присыпки</label>
               </div>
               <div class="filter-block">
@@ -343,7 +347,7 @@
         </div>
         <div class="footer-copyright">
           <img src="img/logo/logo-html-academy.png" alt="HTML Academy" width="108" height="37">
-          <p>Сделано в <a href="#">HTML Academy</a> &copy; 2016</p>
+          <p>Сделано в <a href="https://htmlacademy.ru/" target="_blank">HTML Academy</a> &copy; 2016</p>
         </div>
       </div>
     </footer>

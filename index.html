@@ -17,7 +17,7 @@
           <div class="user-block">
             <div class="user-block-element">
               <a href="#" class="user-block-btn search"></a>
-              <div class="popup">
+              <div class="popup search-item">
                 <form action="#">
                   <input type="text" id="search" class="textarea">
                   <div class="placeholder">
@@ -28,7 +28,7 @@
             </div>
             <div class="user-block-element">
               <a href="#" class="user-block-btn entrance">Вход</a>
-              <div class="popup">
+              <div class="popup entrance-item">
                 <form action="#" class="clearfix">
                   <input type="email" id="e-mail" class="textarea">
                   <div class="placeholder">
@@ -60,23 +60,25 @@
             <ul class="navigation">
               <li class="navigation-item">
                 <a href="#">Каталог</a>
-                <ul class="catalog">
-                  <li>
-                    <a href="#" class="new">Новинки</a>
-                  </li>
-                  <li>
-                    <a href="catalog.html">Сливочное</a>
-                  </li>
-                  <li>
-                    <a href="#">Щербеты</a>
-                  </li>
-                  <li>
-                    <a href="#">Фруктовый лед</a>
-                  </li>
-                  <li>
-                    <a href="#">Мелорин</a>
-                  </li>
-                </ul>
+                <div class="catalog">
+                  <ul>
+                    <li>
+                      <a href="#" class="new">Новинки</a>
+                    </li>
+                    <li>
+                      <a href="catalog.html">Сливочное</a>
+                    </li>
+                    <li>
+                      <a href="#">Щербеты</a>
+                    </li>
+                    <li>
+                      <a href="#">Фруктовый лед</a>
+                    </li>
+                    <li>
+                      <a href="#">Мелорин</a>
+                    </li>
+                  </ul>
+                </div>
               </li>
               <li class="navigation-item">
                 <a href="#">Доставка и оплата</a>
@@ -208,31 +210,36 @@
       </div>
       <div class="columns clearfix">
         <div class="column left blog">
+          <img src="img/background-img/strawberry-background.png" alt="Вкусный сорбет" width="560" height="220">
           <div class="blog-post">
             <p>Новое в нашем блоге</p>
             <a href="#">
+              <!--Ставим <br> так как может быть абсолютно любая картинка
+              и текст и от этого зависит какие будут переносы-->
               10 способов сервировки<br>
               фруктовых щербетов<br>
               к столу
             </a>
           </div>
-        <img src="img/background-img/strawberry-background.png" alt="Вкусный сорбет" width="560" height="220">
         </div>
         <div class="column right subscription">
-          <div class="subscription-content">
-            <p>
-              Подпишитесь на нашу сладкую рассылку и будете всегда в курсе
-              всего самого вкусного, что у нас происходит. Обещаем не спамить
-              и не слать всякой не нужной ерунды. Честно =)
-            </p>
-            <form action="#">
-              <input type="submit" value="Отправить" class="red-button">
-              <div class="text-box-container">
-                <input type="email" placeholder="Электронная почта" class="text-box">
-              </div>
-            </form>
+            <div class="subscription-content">
+              <p>
+                Подпишитесь на нашу сладкую рассылку и будете всегда в курсе
+                всего самого вкусного, что у нас происходит. Обещаем не спамить
+                и не слать всякой не нужной ерунды. Честно =)
+              </p>
+              <form action="#">
+                <input type="submit" value="Отправить" class="red-button">
+                <div class="text-box-container">
+                  <input type="email" id="e-mail-news" class="textarea">
+                  <div class="placeholder">
+                    <label for="e-mail-news">Электронная почта</label>
+                  </div>
+                </div>
+              </form>
+            </div>
           </div>
-        </div>
       </div>
     </main>
     <div class="contacts">
@@ -281,7 +288,7 @@
         </div>
         <div class="footer-copyright">
           <img src="img/logo/logo-html-academy.png" alt="HTML Academy" width="108" height="37">
-          <p>Сделано в <a href="#">HTML Academy</a> &copy; 2016</p>
+          <p>Сделано в <a href="https://htmlacademy.ru/" target="_blank">HTML Academy</a> &copy; 2016</p>
         </div>
       </div>
     </footer>
