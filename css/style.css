@@ -692,6 +692,7 @@ body > input {
   margin: 0 auto;
   font-size: 32px;
   line-height: 63px;
+  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
 }
 
 .slider-switch {
