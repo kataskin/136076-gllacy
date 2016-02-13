@@ -241,6 +241,7 @@ body {
 
 .navigation-item .active {
   background-color: #d07058;
+  text-decoration: none;
 }
 
 .catalog {
@@ -424,6 +425,7 @@ background-repeat: no-repeat;
   font-size: 16px;
   line-height: 24px;
   font-weight: bold;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
 
   /*Для сетки*/
   outline: 2px solid red;
@@ -433,7 +435,7 @@ background-repeat: no-repeat;
   position: relative;
 }
 
-.placeholder label {
+.form-hint {
   position: absolute;
   left: 15px;
   top: -42px;
@@ -446,11 +448,18 @@ background-repeat: no-repeat;
   border: 2px solid #999999;
 }
 
-.textarea:focus + .placeholder label {
+.focus {
   top: -72px;
   font-size: 11px;
   line-height: 24px;
   color: #5b9ddf;
+}
+
+.lostfocus {
+  top: -72px;
+  font-size: 11px;
+  line-height: 24px;
+  color: #9a9a9a;
 }
 
 .search-item .popup-form-search {
@@ -514,6 +523,15 @@ background-repeat: no-repeat;
   width: 21px;
   height: 20px;
   background-position: -10px -10px;
+}
+
+.basket-full {
+  background-color: #f7f6f3;
+  color: #313131;
+}
+
+.basket-full::before {
+  background-position: -10px -50px;
 }
 
 .basket-full::after {
@@ -1472,12 +1490,8 @@ input[name="filling"]:disabled:checked + label::after {
   height: 22px;
 }
 
-.next a {
-  display: block;
-}
-
 .prev::before,
-.next::before {
+.next a::before {
   content: "";
   display: block;
   position: absolute;
@@ -1486,7 +1500,7 @@ input[name="filling"]:disabled:checked + label::after {
   height: 7px;
 }
 
-.next::before {
+.next a::before {
   right: 0;
   border-right: 2px solid #ffffff;
   border-bottom: 2px solid #ffffff;
@@ -1706,7 +1720,7 @@ padding-top: 18px;
 
 /*!!!!!!!!!!!!!!!!!!!!!!!!!!!madal-content!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 
-.tansparent-background {
+.transparent-background {
   display: none;
   z-index: 10;
   position: fixed;
@@ -1717,12 +1731,17 @@ padding-top: 18px;
   background-color: rgba(0, 0, 0, 0.3);
 }
 
+.transparent-background-show {
+  display: block;
+}
+
 .modal-content {
-  display: none;
+  display: block;
   position: absolute;
-  top: 338px;
+  top: 50%;
   left: 50%;
   margin-left: -169px;
+  margin-top: -221px;
   width: 429px;
   padding-left: 24px;
   padding-right: 24px;
@@ -1731,9 +1750,23 @@ padding-top: 18px;
   color: #343434;
   background-color: #f8f7f4;
   border-radius: 15px;
+  transform-origin: bottom right;
+  animation-name: top;
+  animation-duration: 0.6s;
 
   /*для сетки*/
   outline: 2px solid yellow;
+}
+
+@keyframes top {
+  0% {left: -50000px;}
+  15% {left: 30%;}
+  16% {transform: rotate(10deg);}
+  30% {left: 40%;}
+  45% {left: 50%;}
+  75% {transform: rotate(10deg);}
+  83% {transform: rotate(0deg);}
+  91% {transform: rotate(1deg);}
 }
 
  .modal-content h3 {
@@ -1755,9 +1788,13 @@ padding-top: 18px;
  .modal-content textarea {
    box-sizing: border-box;
    min-height: 155px;
+   min-width: 429px;
+   max-width: 429px;
+   resize: none;
+   overflow: auto;
  }
 
-.big-area label{
+.big-area .form-hint {
    top: -160px;
 }
 
@@ -1781,13 +1818,14 @@ padding-top: 18px;
 .modal-content .close-button {
   display: block;
   position: absolute;
-  top: 10px;
-  right: 30px;
+  width: 20px;
+  height: 20px;
+  top: 20px;
+  right: 20px;
   font-size: 0;
-}
 
-.modal-content .close-button:active {
-
+  /*Для сетки*/
+  outline: 2px solid red;
 }
 
 .modal-content .close-button::before,
@@ -1795,9 +1833,9 @@ padding-top: 18px;
   content: "";
   display: block;
   position: absolute;
-  top: 13px;
-  left: -5px;
-  width: 20px;
+  top: 9px;
+  left: -3px;
+  width: 25px;
   border: 1px solid #131313;
 }
 
@@ -1808,3 +1846,5 @@ padding-top: 18px;
 .modal-content .close-button::after {
   transform: rotate(-45deg);
 }
+
+/*!!!!!!!!!!!!!!!!!!!!!!!Анимация формы!!!!!!!!!!!!!!!!!!!!!!!!!!*/
