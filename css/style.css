@@ -808,7 +808,7 @@ h2 {
   position: relative;
   width: 22.2%;
   margin-right: 2.2%;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   padding-bottom: 20px;
   font-size: 16px;
 }
@@ -1026,8 +1026,8 @@ h3 {
 }
 
 .blog-post p {
-  margin: 0;
-  margin-bottom: 3px;
+  margin-top: 5px;
+  margin-bottom: 0;
   font-size: 16px;
   font-weight: 500;
   color: #5a5a5a;
@@ -1065,6 +1065,17 @@ h3 {
   margin: 0;
   margin-bottom: 6px;
   padding: 0;
+}
+
+.subscription-content .textarea {
+  height: 44px;
+}
+
+.subscription-content .form-hint {
+  left: 11px;
+  top: -43px;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 .subscription-content .red-button {
@@ -1121,7 +1132,7 @@ h3 {
 }
 
 .contacts-detail p {
-  margin-bottom: 20px;
+  margin-bottom: 22px;
   font-size: 14px;
   line-height: 20px;
   color: #343434;
@@ -1197,14 +1208,10 @@ h1 {
 .filter {
   display: inline-block;
   vertical-align: top;
-  margin-right: 15px;
-  margin-bottom: 12px;
+  margin-right: 14px;
+  margin-bottom: 15px;
   font-size: 16px;
   line-height: 20px;
-}
-
-.filter:nth-child(4) {
-  margin-right: 12px;
 }
 
 .filter:last-child {
@@ -1213,28 +1220,39 @@ h1 {
 
 h5 {
   margin: 0;
-  margin-bottom: 7px;
+  margin-bottom: 6px;
   padding-left: 15px;
   font-size: 14px;
   line-height: 17px;
+  font-weight: 500;
 }
 
 .filter-block {
   display: inline-block;
   vertical-align: top;
+  margin-right: 19px;
   font-size: 16px;
-  line-height: 18px;
+  line-height: 24px;
   font-weight: 500;
+}
+
+.fat .filter-block {
+  margin-right: 15px;
 }
 
 .filter .user-block-btn {
   position: relative;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding-left: 16px;
+  padding-top: 6px;
+  padding-bottom: 6px;
   font-size: 16px;
   line-height: 20px;
+}
+
+.filter .sorting {
+  border: none;
+  padding: 6px 11px;
+  height: 36px;
 }
 
 .filter:nth-child(2) .user-block-btn {
@@ -1294,13 +1312,14 @@ h5 {
 .fat label {
   position: relative;
   padding-left: 30px;
-  margin-right: 20px;
 }
 
 .filter-line label::before {
   content: "";
   display: block;
   position: absolute;
+  left: 0;
+  top: 1px;
   width: 20px;
   height: 20px;
   box-sizing: border-box;
@@ -1334,6 +1353,7 @@ input[name="fatness"]:disabled:checked + label::after {
 
 .filling label::before {
   border-radius: 3px;
+  left: -1px;
 }
 
 input[name="filling"]:checked + label::after {
