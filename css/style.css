@@ -1,6 +1,4 @@
 body {
-  /*background: url("../img/gllacy-index-1200.png") no-repeat 50% 0;
-  background-size: 1200px auto;*/
   background-color: #849d8f;
   margin: 0;
   min-width: 900px;
@@ -19,7 +17,7 @@ body {
 /*!!!!!!!!!!!!!!!!!!!!!!!!Sprite!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 
 .sprite {
-    background-image: url(spritesheet.png);
+    background-image: url(sprite.png);
     background-repeat: no-repeat;
     display: block;
 }
