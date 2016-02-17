@@ -806,11 +806,13 @@ h2 {
 
 .raspberries {
   height: 230px;
+  background-color: #74091d;
   background-image: url("../img/background-img/raspberries-background.png");
 }
 
 .chocolate {
   height: 230px;
+  background-color: #472c20;
   background-image: url("../img/background-img/chocolate-background.png");
 }
 
@@ -940,6 +942,7 @@ h2 {
   padding-top: 20px;
   margin-bottom: 40px;
   border-radius: 13px;
+  background-color: #e9dbbe;
   background-image: url("../img/background-img/wafer.jpg");
 }
 
@@ -1024,6 +1027,7 @@ h3 {
 .blog {
   position: relative;
   overflow: hidden;
+  background-color: #ffffff;
 }
 
 .blog img {
