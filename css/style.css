@@ -17,135 +17,135 @@ body {
 /*!!!!!!!!!!!!!!!!!!!!!!!!Sprite!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 
 .sprite {
-    background-image: url(sprite.png);
-    background-repeat: no-repeat;
-    display: block;
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  display: block;
 }
 
 .sprite-basket {
-    width: 21px;
-    height: 20px;
-    background-position: -10px -10px;
+  width: 21px;
+  height: 20px;
+  background-position: -10px -10px;
 }
 
 .sprite-basket-black {
-    width: 21px;
-    height: 20px;
-    background-position: -10px -50px;
+  width: 21px;
+  height: 20px;
+  background-position: -10px -50px;
 }
 
 .sprite-basket-full {
-    width: 15px;
-    height: 10px;
-    background-position: -10px -90px;
+  width: 15px;
+  height: 10px;
+  background-position: -10px -90px;
 }
 
 .sprite-cow {
-    width: 49px;
-    height: 51px;
-    background-position: -10px -120px;
+  width: 49px;
+  height: 51px;
+  background-position: -10px -120px;
 }
 
 .sprite-entranc {
-    width: 20px;
-    height: 19px;
-    background-position: -10px -191px;
+  width: 20px;
+  height: 19px;
+  background-position: -10px -191px;
 }
 
 .sprite-entranc-black {
-    width: 20px;
-    height: 19px;
-    background-position: -10px -230px;
+  width: 20px;
+  height: 19px;
+  background-position: -10px -230px;
 }
 
 .sprite-facebook {
-    width: 31px;
-    height: 31px;
-    background-position: -10px -269px;
+  width: 31px;
+  height: 31px;
+  background-position: -10px -269px;
 }
 
 .sprite-facebook-active {
-    width: 31px;
-    height: 31px;
-    background-position: -10px -320px;
+  width: 31px;
+  height: 31px;
+  background-position: -10px -320px;
 }
 
 .sprite-heart {
-    width: 15px;
-    height: 13px;
-    background-position: -10px -371px;
+  width: 15px;
+  height: 13px;
+  background-position: -10px -371px;
 }
 
 .sprite-hit {
-    width: 61px;
-    height: 61px;
-    background-position: -10px -404px;
+  width: 61px;
+  height: 61px;
+  background-position: -10px -404px;
 }
 
 .sprite-ice-cream {
-    width: 51px;
-    height: 51px;
-    background-position: -10px -485px;
+  width: 51px;
+  height: 51px;
+  background-position: -10px -485px;
 }
 
 .sprite-insta {
-    width: 31px;
-    height: 31px;
-    background-position: -10px -556px;
+  width: 31px;
+  height: 31px;
+  background-position: -10px -556px;
 }
 
 .sprite-insta-active {
-    width: 31px;
-    height: 31px;
-    background-position: -10px -607px;
+  width: 31px;
+  height: 31px;
+  background-position: -10px -607px;
 }
 
 .sprite-leaf {
-    width: 51px;
-    height: 51px;
-    background-position: -10px -658px;
+  width: 51px;
+  height: 51px;
+  background-position: -10px -658px;
 }
 
 .sprite-search {
-    width: 17px;
-    height: 17px;
-    background-position: -10px -729px;
+  width: 17px;
+  height: 17px;
+  background-position: -10px -729px;
 }
 
 .sprite-search-black {
-    width: 17px;
-    height: 17px;
-    background-position: -10px -766px;
+  width: 17px;
+  height: 17px;
+  background-position: -10px -766px;
 }
 
 .sprite-thermometer {
-    width: 49px;
-    height: 51px;
-    background-position: -10px -803px;
+  width: 49px;
+  height: 51px;
+  background-position: -10px -803px;
 }
 
 .sprite-twitter {
-    width: 34px;
-    height: 32px;
-    background-position: -10px -874px;
+  width: 34px;
+  height: 32px;
+  background-position: -10px -874px;
 }
 
 .sprite-twitter-active {
-    width: 31px;
-    height: 31px;
-    background-position: -10px -926px;
+  width: 31px;
+  height: 31px;
+  background-position: -10px -926px;
 }
 
 .sprite-vkontakte {
-    width: 31px;
-    height: 31px;
-    background-position: -10px -977px;
+  width: 31px;
+  height: 31px;
+  background-position: -10px -977px;
 }
 
 .sprite-vkontakte-active {
-    width: 31px;
-    height: 31px;
-    background-position: -10px -1028px;
+  width: 31px;
+  height: 31px;
+  background-position: -10px -1028px;
 }
 
 /*!!!!!!!!!!!!!!!!!!!!!!!header!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
@@ -199,13 +199,13 @@ body {
   color: white;
 }
 
-.navigation-item:hover > a {
+.navigation-item > a:hover {
   background-color: #f7f6f3;
   color: #333333;
   text-decoration: none;
 }
 
-.navigation-item:active > a {
+.navigation-item > a:active {
   background-color: #f7f6f3;
   color: #333333;
   text-decoration: none;
@@ -222,7 +222,7 @@ body {
 }
 
 .catalog {
-  z-index: 1;
+  z-index: 2;
   display: none;
   position: absolute;
   padding-top: 5px;
@@ -236,14 +236,15 @@ body {
   box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
   border-radius: 5px;
   overflow: hidden;
+  list-style: none;
 }
 
 .catalog a,
 .active-type div {
   display: block;
-  padding-top: 4px;
+  padding-top: 5px;
   padding-right: 13px;
-  padding-bottom: 0px;
+  padding-bottom: 5px;
   padding-left: 13px;
   font-size: 14px;
   line-height: 17px;
@@ -255,11 +256,11 @@ body {
 .catalog li {
   margin: 5px 0;
   padding-left: 7px;
-  padding-right: 7px;
+  padding-right: 9px;
 }
 
 .catalog .new {
-  padding-bottom: 3px;
+  padding-bottom: 9px;
   font-weight: bold;
   border-bottom: 1px solid #d1d0ce;
 }
@@ -455,10 +456,19 @@ background-repeat: no-repeat;
 
 .popup-form-entrance {
   padding-top: 20px;
+  padding-bottom: 13px;
 }
 
 .popup-form-entrance .textarea {
   margin-top: 0;
+}
+
+.form-entrance:focus + .placeholder .form-hint {
+  top: -67px;
+}
+
+.form-entrance + .placeholder .lostfocus {
+  top: -67px;
 }
 
 .no-password {
@@ -1062,11 +1072,12 @@ h3 {
   font-weight: bold;
   color: #353535;
   background-color: rgba(255, 255, 255, 0.8);
-  outline: 10px solid rgba(255, 255, 255, 0.8);
+  outline: 5px solid rgba(255, 255, 255, 0.8);
 }
 
 .subscription {
   padding: 6px;
+  background-color: #ffffff;
   background-image: url("../img/background-img/post-base.png");
 }
 
@@ -1129,6 +1140,7 @@ h3 {
 
 .map {
   height: 430px;
+  background-color: #e5e0cc;
   background-image: url("../img/background-img/map.png");
 }
 
@@ -1146,11 +1158,11 @@ h3 {
   top: 65px;
   right: 2.3%;
   width: 254px;
-  padding-left: 22px;
+  padding-left: 24px;
   padding-right: 22px;
   padding-bottom: 30px;
   padding-top: 10px;
-  border-radius: 10px;
+  border-radius: 15px;
   background-color: #fefefe;
 }
 
@@ -1301,9 +1313,9 @@ h5 {
 .line .price-line {
   z-index: 1;
   position: absolute;
-  left: 19px;
+  left: 29px;
   top: 0;
-  width: 118px;
+  width: 98px;
   height: 4px;
   background-color: #f8f7f4;
 }
@@ -1316,15 +1328,16 @@ h5 {
   height: 20px;
   border-radius: 50%;
   background-color: #f8f7f4;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
 
 .price-line .min {
-  left: 0;
+  left: -10px;
 }
 
 .price-line .max {
-  right: 0;
+  right: -10px;
 }
 
 .filter .filling,
@@ -1403,23 +1416,21 @@ input[name="filling"]:disabled:checked + label::after {
   border-bottom: 2px solid #b2c1b7;
 }
 
-.filter-btn {
-  margin-right: 0;
-}
-
 .filter-block label:hover::before {
   border: 2px solid #ffffff;
 }
 
 .filter input[type="submit"] {
+  margin-right: 0;
   box-sizing: border-box;
   height: 37px;
-  padding-left: 27px;
-  padding-right: 27px;
-  border: 2px solid #ffffff;
+  padding-left: 29px;
+  padding-right: 29px;
   font-size: 16px;
   line-height: 20px;
   font-weight: 500;
+  border: none;
+  box-shadow: inset 0 0 0 2px #ffffff;
 }
 
 
@@ -1440,7 +1451,6 @@ input[name="filling"]:disabled:checked + label::after {
 
 .pages {
   float: right;
-  width: 300px;
   text-align: right;
   margin-top: 42px;
   margin-bottom: 40px;
@@ -1521,8 +1531,19 @@ input[name="filling"]:disabled:checked + label::after {
 /*!!!!!!!!!!!!!!!!!!!!!!!!!!footer!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 
 .main-footer {
-padding-top: 18px;
-border: 1px solid rgba(255, 255, 255, 0.3);
+  padding-top: 18px;
+  padding-bottom: 15px;
+}
+
+.site-page .container::before {
+  content: "";
+  position: absolute;
+  top: -19px;
+  left: 2.3%;
+  right: 2.3%;
+  display: block;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .footer-social {
@@ -1624,9 +1645,9 @@ border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .footer-documents-list a:hover,
- .footer-documents-list a:active,
- .footer-copyright a:hover,
- .footer-copyright a:active {
+.footer-documents-list a:active,
+.footer-copyright a:hover,
+.footer-copyright a:active {
   color: #ffbc9e;
 }
 
@@ -1662,7 +1683,7 @@ border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .footer-copyright p {
-  margin-top: 3px;
+  margin-top: 4px;
 }
 
 .footer-copyright a {
@@ -1726,15 +1747,15 @@ border: 1px solid rgba(255, 255, 255, 0.3);
   0% {background-color: #eb543a;}
 }
 
- .modal-content h3 {
+.modal-content h3 {
    margin: 0;
    margin-bottom: 10px;
    margin-right: 2px;
- }
+}
 
- .modal-content .textarea {
+.modal-content .textarea {
    height: 43px;
- }
+}
 
 .modal-content .form-hint{
   top: -44px;
@@ -1750,19 +1771,19 @@ border: 1px solid rgba(255, 255, 255, 0.3);
   line-height: 24px;
 }
 
- .modal-content input[type="email"],
- .modal-content input[type="text"] {
+.modal-content input[type="email"],
+.modal-content input[type="text"] {
    width: 267px;
- }
+}
 
- .modal-content textarea {
+.modal-content textarea {
    box-sizing: border-box;
    min-height: 155px;
    min-width: 429px;
    max-width: 429px;
    resize: none;
    overflow: auto;
- }
+}
 
 .big-area .form-hint {
    top: -160px;

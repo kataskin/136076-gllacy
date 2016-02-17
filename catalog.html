@@ -33,11 +33,11 @@
               <div class="popup">
                 <div class="popup-form-entrance">
                   <form action="#">
-                    <input type="email" id="e-mail" class="textarea">
+                    <input type="email" id="e-mail" class="textarea form-entrance">
                     <div class="placeholder">
                       <label for="e-mail" class="form-hint">Электронная почта</label>
                     </div>
-                    <input type="password" id="password" class="textarea">
+                    <input type="password" id="password" class="textarea form-entrance">
                     <div class="placeholder">
                       <label for="password" class="form-hint">Пароль</label>
                     </div>
@@ -64,7 +64,7 @@
                         </td>
                         <td class="products-count">
                           <p>1,5 кг <span class="gray">× 200 руб.</span></p>
-                        <td>
+                        </td>
                         <td class="price-item">
                           <p>300 руб.</p>
                         </td>
@@ -77,7 +77,7 @@
                         </td>
                         <td class="products-count">
                           <p>1,5 кг <span class="gray">× 300 руб.</span></p>
-                        <td>
+                        </td>
                         <td class="price-item">
                           <p>450 руб.</p>
                         </td>
@@ -150,10 +150,10 @@
             <div class="filter">
               <h5>Сортировка:</h5>
               <select class="sorting user-block-btn">
-                <option>по популярности</option>
-                <option>сначала недорогие</option>
-                <option>сначала дорогие</option>
-                <option>по жирности</option>
+                <option name="sorting" value="popular">по популярности</option>
+                <option name="sorting" value="cheap">сначала недорогие</option>
+                <option name="sorting" value="expensive">сначала дорогие</option>
+                <option name="sorting" value="fat">по жирности</option>
               </select>
             </div>
             <div class="filter">
@@ -192,23 +192,23 @@
               <h5>Наполнители:</h5>
               <div class="filter-line filling user-block-btn">
                 <div class="filter-block">
-                  <input type="checkbox" name="filling" id="chocolate" checked>
+                  <input type="checkbox" name="filling" value="chocolate" id="chocolate" checked>
                   <label for="chocolate">шоколадные</label>
                 </div>
                 <div class="filter-block">
-                  <input type="checkbox" name="filling" id="sugar" checked>
+                  <input type="checkbox" name="filling" value="sugar" id="sugar" checked>
                   <label for="sugar">сахарные присыпки</label>
                 </div>
                 <div class="filter-block">
-                  <input type="checkbox" name="filling" id="fruit">
+                  <input type="checkbox" name="filling" value="fruit" id="fruit">
                   <label for="fruit">фрукты</label>
                 </div>
                 <div class="filter-block">
-                  <input type="checkbox" name="filling" id="syrup">
+                  <input type="checkbox" name="filling" value="syrup" id="syrup">
                   <label for="syrup">сиропы</label>
                 </div>
                 <div class="filter-block">
-                  <input type="checkbox" name="filling" id="jam">
+                  <input type="checkbox" name="filling" value="jam" id="jam">
                   <label for="jam">джемы</label>
                 </div>
               </div>
@@ -333,7 +333,7 @@
         </div>
       </div>
     </main>
-    <footer class="main-footer">
+    <footer class="main-footer site-page">
       <div class="container clearfix">
         <div class="footer-social">
           <a href="#" class="social twitter">Твиттер</a>
