@@ -1125,6 +1125,7 @@ h3 {
 
 .map {
   height: 430px;
+  background-image: url("../img/background-img/map.png");
 }
 
 .map .container {
