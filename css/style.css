@@ -645,6 +645,7 @@ background-repeat: no-repeat;
 
 .work-time b {
   position: relative;
+  z-index: 1;
   font-size: 22px;
   line-height: 24px;
   font-weight: 900;
@@ -800,6 +801,7 @@ h2 {
 .chocolate {
   min-height: 230px;
   padding-bottom: 90px;
+  background-size: cover;
 }
 
 .raspberries p,
