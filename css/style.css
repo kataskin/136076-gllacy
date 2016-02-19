@@ -1780,17 +1780,12 @@ input[name="filling"]:disabled:checked + label::after {
 @-webkit-keyframes show {
   0% {left: -50000px;}
   15% {left: 30%;}
-  16% {-webkit-transform: rotate(10deg);
-    transform: rotate(10deg);}
+  16% {-webkit-transform: rotate(10deg);}
   30% {left: 40%;}
   45% {left: 50%;}
-  75% {
-    -webkit-transform: rotate(10deg);
-    transform: rotate(10deg);}
-  83% {-webkit-transform: rotate(0deg);
-    transform: rotate(0deg);}
-  91% {-webkit-transform: rotate(1deg);
-    transform: rotate(1deg);}
+  75% {-webkit-transform: rotate(10deg);}
+  83% {-webkit-transform: rotate(0deg);}
+  91% {-webkit-transform: rotate(1deg);}
 }
 
 @keyframes show {
